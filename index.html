@@ -1,24 +1,33 @@
-<!DOCTYPE html> <!--Dit is de homepage van mijn site-->
-<html> <!--Dit is het html-element-->
+<!DOCTYPE html> <!--dit is de homepage van mijn site-->
+<html> <!--dit is het html-element-->
     <head>
-        <title>Homepage</title> <!--Dit is de naam van het tablad-->
-        <meta charset="utf-8">
+        <title>Homepage</title> <!--dit is de naam op het tabblad-->
+        <link rel="stylesheet" type="text/css" href="opmaak.css"> <!--link naar mijn opmaakbestand, zonder deze regel geen opmaak-->
+        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
     </head>
     <body>
-        <p><h3>Hoi, ik ben</h3><h1>Hai-Jun</h1></p>
-        <p><h5>Ik ben 16 jaar en zit op het Vlietland College.
-            Ik houd van technologie.
-            <!--Hoe zet je de tekst op de juiste plaats, letter type en grote?-->
-        </h5></p>
-        <p><a href="binairstelsel.html">pagina 2</a></p> <!-- Dit is de link om van pagina naar pagina te gaan-->
-        <!--Afbeelding vragen want dat snap ik niet-->
-    <img src="Ict1.jpeg" 
-      alt="ICT en High-Tech visualisatie">
-        <!--Dit hier onder is de hamburger-->
+
+        <!--Menu: een lijst van links. ul = de lijst, li = een item, a = een link-->
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="binairstelsel.html">binair stelsel</a></li>
-            <li><a href="kleurmodellen.html">kleurmodellen</a></li>
+            <li>
+                <a href="binairstelsel.html">Onderwerpen</a>
+                <!--Dropdown: een lijst in een lijst. Komt tevoorschijn als de muis op Onderwerpen staat-->
+                <ul>
+                    <li><a href="binairstelsel.html">Binair stelsel</a></li>
+                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                </ul>
+            </li>
         </ul>
+
+        <!--p = paragraaf, een block-element: begint op een nieuwe regel-->
+        <p>Hoi, ik ben Hai-Jun. Ik ben 16 jaar en zit op het Vlietland College. Ik houd van technologie.</p>
+
+        <!--Link naar mijn 2e pagina. a = link, href = waar de link naartoe gaat-->
+        <p><a href="binairstelsel.html">Uitleg binair stelsel</a></p>
+
+        <!--Afbeelding: img = image, src = naam van de afbeelding, alt = tekst als de afbeelding niet gevonden wordt-->
+        <img src="Ict1.jpeg" alt="ICT en High-Tech visualisatie">
+
     </body>
 </html>
