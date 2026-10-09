@@ -1,50 +1,14 @@
-<!DOCTYPE html> <!--dit is de homepage van mijn site. Die heet altijd index.html en blijft in de hoofdmap-->
-
-<html> <!--dit is het html-element, daar staat de hele pagina in-->
-    <head> <!--de head: informatie over de pagina (meta-data)-->
-        <title>Homepage Hai-Jun</title> <!--de titel, die staat op het tabblad-->
+<!DOCTYPE html> <!--dit is de homepage van mijn site-->
+<html> <!--dit is het html-element, hier staat de hele pagina in-->
+    <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
+        <title>Ik ben Hai-Jun</title> <!--de titel, die staat op het tabblad-->
         <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
-        <link rel="stylesheet" type="text/css" href="css/opmaak.css"> <!--link naar mijn .css-bestand. Het staat in de map css-->
     </head>
-    <body> <!--de body: de inhoud van de pagina, dit zie je op de site-->
-
-        <!--MENU: een lijst van links (anchors).
-            ul = unordered list, de hele lijst
-            li = list item, 1 item van de lijst
-            a  = anchor, een link
-            Een ul BINNEN een li = een dropdown. Dit menu heeft 3 niveaus (3 geneste ul's).-->
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li> <!--niveau 1-->
-            <li>
-                <a href="html/binairstelsel.html">Onderwerpen</a> <!--niveau 1, met een dropdown-->
-                <ul> <!--niveau 2: klapt open als de muis op Onderwerpen staat-->
-                    <li><a href="html/binairstelsel.html">Binair stelsel</a></li>
-                    <li>
-                        <a href="html/kleurmodellen.html">Beeld &gt;</a> <!--&gt; = het teken >-->
-                        <ul> <!--niveau 3: klapt open als de muis op Beeld staat-->
-                            <li><a href="html/kleurmodellen.html">Kleurmodellen</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <!--div = division, een block-element. Een soort container voor een deel van de pagina-->
-        <div class="inhoud">
-
-            <!--p = paragraaf, ook een block-element: begint op een nieuwe regel en neemt de hele breedte-->
-            <p>Hoi, ik ben Hai-Jun. Ik zit op het Vlietland College en ik houd van technologie.</p>
-
-            <!--a = link (anchor), een inline-element: neemt alleen zoveel ruimte als nodig is.
-                html/ = het bestand staat in de map html-->
-            <p><a href="html/binairstelsel.html">Uitleg binair stelsel</a></p>
-
-            <!--img = image, een afbeelding (inline-element)
-                src = source: waar de afbeelding staat. images/ = in de map images
-                alt = alternatieve tekst: die zie je als de afbeelding niet gevonden wordt-->
-            <img class="afbeelding" src="images/Ict1.jpeg" alt="ICT en High-Tech visualisatie">
-
-        </div>
-
+    <body> <!--de body: alles wat je ZIET op je site-->
+        Hoi, ik ben Hai-Jun. Welkom op mijn website!
+        
+        <br> <!--br =een nieuwe regel-->
+        <br>
+        <a href="binairstelsel.html">Uitleg binair stelsel</a> <!--link naar mijn 2e pagina-->
     </body>
 </html>
