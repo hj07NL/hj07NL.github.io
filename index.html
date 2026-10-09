@@ -5,20 +5,29 @@
         <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
     </head>
     <body> <!--de body: alles wat je ZIET op je site-->
+
+        <!--MENU: een lijst van links. ul = de hele lijst, li = 1 regel van de lijst, a = de link-->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="binairstelsel.html">Binair stelsel</a></li>
             <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
         </ul>
-        Hoi, ik ben Hai-Jun. Welkom op mijn website!
 
-        <br> <!--br = break, een nieuwe regel-->
-        <br>
-        <a href="binairstelsel.html">Uitleg binair stelsel</a> <!--link naar mijn 2e pagina-->
+        <!--div = een block-element: een doos voor de inhoud van mijn pagina.
+            class="inhoud" = het naamkaartje van de doos, dat gebruik ik straks in CSS-->
+        <div class="inhoud">
 
-        <br>
-        <br>
-        <!--img = image (plaatje). src = de naam van het plaatje, alt = tekst als het plaatje niet gevonden wordt-->
-        <img src="Ict1.jpeg" alt="Een computerchip met blauw licht">
+            <!--p = paragraaf, een block-element: begint altijd op een nieuwe regel-->
+            <p>Hoi, ik ben Hai-Jun. Welkom op mijn website!</p>
+
+            <!--a = link, een inline-element: neemt alleen de ruimte die nodig is.
+                De link staat IN een p, want een block mag een inline-element bevatten-->
+            <p><a href="binairstelsel.html">Uitleg binair stelsel</a></p>
+
+            <!--img = plaatje, ook een inline-element-->
+            <img src="Ict1.jpeg" alt="Een computerchip met blauw licht">
+
+        </div> <!--einde van de doos-->
+
     </body>
 </html>
