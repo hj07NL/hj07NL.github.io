@@ -2,7 +2,11 @@
    Elk .html-bestand linkt naar dit bestand in de <head>.
    Mijn kleuren: donkerblauw (#0b2545) en oranje (#f28c28). */
 
-
+/* body = de hele pagina.
+   margin: 0 = geen witte rand om de pagina, zodat de menubalk tegen de rand zit */
+body {
+  margin: 0;
+}
 /* ---------- MENU ---------- */
 
 /* Code van w3schools (horizontaal menu).
@@ -36,6 +40,48 @@ li a:hover {
   background-color: #f28c28;
 }
 
+/* ---------- DROPDOWN ---------- */
+
+/* li.rechts = het menu-item met class="rechts" (Menu ▾).
+   float: right = dit item staat RECHTS in de balk */
+li.rechts {
+  float: right;
+}
+
+/* li ul = een lijst BINNEN een lijst-item (niveau 2 en 3).
+   Die is eerst ONZICHTBAAR. */
+li ul {
+  display: none;               /* none = niet zichtbaar */
+  position: absolute;          /* zweeft OVER de pagina heen, de rest schuift niet op */
+  right: 0;                    /* tegen de rechterkant van het scherm */
+  min-width: 180px;            /* minstens 180 pixels breed */
+  overflow: visible;           /* anders wordt niveau 3 afgeknipt */
+  z-index: 1;                  /* ligt BOVENOP de rest van de pagina */
+}
+
+/* in de dropdown staan de items ONDER elkaar, niet naast elkaar */
+li ul li {
+  float: none;                 /* niet meer naast elkaar */
+  position: relative;          /* nodig zodat niveau 3 naast dit item komt */
+}
+
+/* tekst in de dropdown links uitlijnen */
+li ul a {
+  text-align: left;
+}
+
+/* li ul ul = niveau 3 (een lijst in een lijst in een lijst).
+   Die komt LINKS naast het item in plaats van eronder */
+li ul ul {
+  top: 0;                      /* op dezelfde hoogte als het item */
+  right: 100%;                 /* helemaal links naast het item */
+}
+
+/* li:hover > ul = als je muis op een li staat, wordt de lijst DIRECT daarin zichtbaar.
+   > = alleen de lijst direct erin, niet de lijsten nog dieper */
+li:hover > ul {
+  display: block;              /* block = wel zichtbaar */
+}
 
 /* ---------- INHOUD ---------- */
 
