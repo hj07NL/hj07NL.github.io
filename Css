@@ -1,0 +1,67 @@
+/* opmaak.css = de opmaak van mijn hele website.
+   Elke .html-pagina linkt naar dit bestand in de <head>.
+   Commentaar in css staat tussen slash-sterretje en sterretje-slash. */
+
+/* ---------- MENU (code van w3schools) ---------- */
+
+/* de lijst zelf: geen bolletjes, geen marge en padding, donkere achtergrond */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* float: left zet de menu-items naast elkaar */
+li {
+  float: left;
+}
+
+/* de links in het menu */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+/* = de achtergrond wordt zwart als de muis op de link staat */
+li a:hover {
+  background-color: #111;
+}
+
+/* ---------- DROPDOWN ---------- */
+
+/* de lijst IN de lijst is eerst onzichtbaar.
+   position: absolute = hij zweeft over de pagina, direct onder het menu-item */
+li ul {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* in de dropdown staan de items onder elkaar, niet naast elkaar */
+li ul li {
+  float: none;
+}
+
+/* muis op het menu-item: de dropdown wordt zichtbaar */
+li:hover ul {
+  display: block;
+}
+
+/* ---------- OPGEZOCHT ----------
+   1. color = de kleur van de tekst.
+      background-color = de kleur van de achtergrond.
+   2. display: block = het element neemt de hele breedte in
+      en het hele vlak is klikbaar, niet alleen de tekst.
+   3. li a:hover = de opmaak van een link in een lijst-item
+      als de muis erop staat.
+   4. padding: 8px 16px
+      a. padding = de ruimte binnen een element, tussen de rand en de tekst.
+      b. px = pixels, de puntjes waaruit een scherm bestaat.
+      c. de 1e waarde is boven en onder, de 2e waarde is links en rechts. */

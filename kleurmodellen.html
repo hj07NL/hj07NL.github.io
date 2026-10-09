@@ -1,16 +1,31 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <!--dit is de pagina over kleurmodellen-->
+<html> <!--dit is het html-element-->
     <head>
-        <title>kleurmodellen</title>
-        <meta charset="utf-8">
+        <title>Kleurmodellen</title> <!--dit is de naam op het tabblad-->
+        <link rel="stylesheet" type="text/css" href="opmaak.css"> <!--link naar mijn opmaakbestand, zonder deze regel geen opmaak-->
+        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
     </head>
     <body>
-       <!--Menu-->
+
+        <!--Menu: dezelfde lijst van links als op elke pagina-->
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="binairstelsel.html">binair stelsel</a></li>
-            <li><a href="kleurmodellen.html">kleurmodellen</a></li>
+            <li>
+                <a href="binairstelsel.html">Onderwerpen</a>
+                <!--Dropdown: een lijst in een lijst-->
+                <ul>
+                    <li><a href="binairstelsel.html">Binair stelsel</a></li>
+                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                </ul>
+            </li>
         </ul>
+
+        <p>Uitleg over kleurmodellen</p>
+
+        <p><a href="index.html">Home</a></p> <!--link terug naar de homepage-->
+
+        <!--Afbeelding over kleurmodellen-->
+        <img src="kleurmodellen.jpg" alt="Afbeelding over kleurmodellen">
 
     </body>
 </html>

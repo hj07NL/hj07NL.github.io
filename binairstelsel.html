@@ -1,19 +1,31 @@
-<!DOCTYPE html> <!--Dit is de 2e pagina van mijn site-->
-<html> <!--Dit is het html-element 2.0-->
+<!DOCTYPE html> <!--dit is de pagina over het binaire stelsel-->
+<html> <!--dit is het html-element-->
     <head>
-        <title>Web pagina 2</title>
-        <meta charset="utf-8">
+        <title>Binair stelsel</title> <!--dit is de naam op het tabblad-->
+        <link rel="stylesheet" type="text/css" href="opmaak.css"> <!--link naar mijn opmaakbestand, zonder deze regel geen opmaak-->
+        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
     </head>
     <body>
-        Uitleg over het binaire stelsel
 
-        <a href="index.html">Home</a> <!--Link terug naar hompage-->
+        <!--Menu: dezelfde lijst van links als op elke pagina-->
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="binairstelsel.html">binair stelsel</a></li>
-            <li><a href="kleurmodellen.html">kleurmodellen</a></li>
+            <li>
+                <a href="binairstelsel.html">Onderwerpen</a>
+                <!--Dropdown: een lijst in een lijst-->
+                <ul>
+                    <li><a href="binairstelsel.html">Binair stelsel</a></li>
+                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                </ul>
+            </li>
         </ul>
 
-        
+        <p>Uitleg over het binaire stelsel</p>
+
+        <p><a href="index.html">Home</a></p> <!--link terug naar de homepage-->
+
+        <!--Afbeelding op mijn 2e pagina-->
+        <img src="binair.jpg" alt="Afbeelding over het binaire stelsel">
+
     </body>
 </html>

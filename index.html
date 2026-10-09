@@ -1,33 +1,50 @@
-<!DOCTYPE html> <!--dit is de homepage van mijn site-->
-<html> <!--dit is het html-element-->
-    <head>
-        <title>Homepage</title> <!--dit is de naam op het tabblad-->
-        <link rel="stylesheet" type="text/css" href="opmaak.css"> <!--link naar mijn opmaakbestand, zonder deze regel geen opmaak-->
-        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
-    </head>
-    <body>
+<!DOCTYPE html> <!--dit is de homepage van mijn site. Die heet altijd index.html en blijft in de hoofdmap-->
 
-        <!--Menu: een lijst van links. ul = de lijst, li = een item, a = een link-->
-        <ul>
-            <li><a href="index.html">Home</a></li>
+<html> <!--dit is het html-element, daar staat de hele pagina in-->
+    <head> <!--de head: informatie over de pagina (meta-data)-->
+        <title>Homepage Hai-Jun</title> <!--de titel, die staat op het tabblad-->
+        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
+        <link rel="stylesheet" type="text/css" href="css/opmaak.css"> <!--link naar mijn .css-bestand. Het staat in de map css-->
+    </head>
+    <body> <!--de body: de inhoud van de pagina, dit zie je op de site-->
+
+        <!--MENU: een lijst van links (anchors).
+            ul = unordered list, de hele lijst
+            li = list item, 1 item van de lijst
+            a  = anchor, een link
+            Een ul BINNEN een li = een dropdown. Dit menu heeft 3 niveaus (3 geneste ul's).-->
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li> <!--niveau 1-->
             <li>
-                <a href="binairstelsel.html">Onderwerpen</a>
-                <!--Dropdown: een lijst in een lijst. Komt tevoorschijn als de muis op Onderwerpen staat-->
-                <ul>
-                    <li><a href="binairstelsel.html">Binair stelsel</a></li>
-                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                <a href="html/binairstelsel.html">Onderwerpen</a> <!--niveau 1, met een dropdown-->
+                <ul> <!--niveau 2: klapt open als de muis op Onderwerpen staat-->
+                    <li><a href="html/binairstelsel.html">Binair stelsel</a></li>
+                    <li>
+                        <a href="html/kleurmodellen.html">Beeld &gt;</a> <!--&gt; = het teken >-->
+                        <ul> <!--niveau 3: klapt open als de muis op Beeld staat-->
+                            <li><a href="html/kleurmodellen.html">Kleurmodellen</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
 
-        <!--p = paragraaf, een block-element: begint op een nieuwe regel-->
-        <p>Hoi, ik ben Hai-Jun. Ik ben 16 jaar en zit op het Vlietland College. Ik houd van technologie.</p>
+        <!--div = division, een block-element. Een soort container voor een deel van de pagina-->
+        <div class="inhoud">
 
-        <!--Link naar mijn 2e pagina. a = link, href = waar de link naartoe gaat-->
-        <p><a href="binairstelsel.html">Uitleg binair stelsel</a></p>
+            <!--p = paragraaf, ook een block-element: begint op een nieuwe regel en neemt de hele breedte-->
+            <p>Hoi, ik ben Hai-Jun. Ik zit op het Vlietland College en ik houd van technologie.</p>
 
-        <!--Afbeelding: img = image, src = naam van de afbeelding, alt = tekst als de afbeelding niet gevonden wordt-->
-        <img src="Ict1.jpeg" alt="ICT en High-Tech visualisatie">
+            <!--a = link (anchor), een inline-element: neemt alleen zoveel ruimte als nodig is.
+                html/ = het bestand staat in de map html-->
+            <p><a href="html/binairstelsel.html">Uitleg binair stelsel</a></p>
+
+            <!--img = image, een afbeelding (inline-element)
+                src = source: waar de afbeelding staat. images/ = in de map images
+                alt = alternatieve tekst: die zie je als de afbeelding niet gevonden wordt-->
+            <img class="afbeelding" src="images/Ict1.jpeg" alt="ICT en High-Tech visualisatie">
+
+        </div>
 
     </body>
 </html>
