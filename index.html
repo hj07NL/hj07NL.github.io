@@ -1,16 +1,15 @@
-<!DOCTYPE html> <!--dit is de homepage van mijn site-->
+<!DOCTYPE html> <!--dit is de homepage van mijn site, die blijft altijd in de hoofdmap staan-->
 <html> <!--dit is het html-element, hier staat de hele pagina in-->
     <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
         <title>Ik ben Hai-Jun</title> <!--de titel, die staat op het tabblad-->
         <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
-        <link rel="stylesheet" type="text/css" href="opmaak.css"> <!--link naar mijn CSS-bestand. Zonder deze regel: geen opmaak!-->
+        <link rel="stylesheet" type="text/css" href="css/opmaak.css"> <!--link naar mijn CSS-bestand. css/ = in de map css-->
     </head>
     <body> <!--de body: alles wat je ZIET op je site-->
 
-        <!--MENU: een lijst van links. ul = de hele lijst, li = 1 regel van de lijst, a = de link-->
-                <!--MENU met dropdown: 3 geneste lijsten (een lijst IN een lijst IN een lijst).
+        <!--MENU met dropdown: 3 geneste lijsten (een lijst IN een lijst IN een lijst).
             ul = de hele lijst, li = 1 item, a = de link.
-            Een ul BINNEN een li is eerst onzichtbaar en klapt open als de muis op die li staat (zie opmaak.css)-->
+            html/ = de pagina staat in de map html-->
         <ul> <!--niveau 1: de donkerblauwe balk-->
             <li><a href="index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
             <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
@@ -18,29 +17,25 @@
                 <ul> <!--niveau 2: klapt open onder Menu-->
                     <li><a href="index.html">Home</a></li>
                     <li>
-                        <a href="binairstelsel.html">◂ Onderwerpen</a> <!--het pijltje laat zien dat er nog een menu naar links opent-->
+                        <a href="html/binairstelsel.html">◂ Onderwerpen</a>
                         <ul> <!--niveau 3: klapt open naast Onderwerpen-->
-                            <li><a href="binairstelsel.html">Binair stelsel</a></li>
-                            <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                            <li><a href="html/binairstelsel.html">Binair stelsel</a></li>
+                            <li><a href="html/kleurmodellen.html">Kleurmodellen</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
 
-        <!--div = een block-element: een doos voor de inhoud van mijn pagina.
-            class="inhoud" = het naamkaartje van de doos, dat gebruik ik straks in CSS-->
+        <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
         <div class="inhoud">
 
-            <!--p = paragraaf, een block-element: begint altijd op een nieuwe regel-->
-            <p>Hoi, ik ben Hai-Jun. Welkom op mijn website!</p>
+            <p>Hoi, ik ben Hai-Jun. Welkom op mijn website!</p> <!--p = paragraaf-->
 
-            <!--a = link, een inline-element: neemt alleen de ruimte die nodig is.
-                De link staat IN een p, want een block mag een inline-element bevatten-->
-            <p><a href="binairstelsel.html">Uitleg binair stelsel</a></p>
+            <p><a href="html/binairstelsel.html">Uitleg binair stelsel</a></p> <!--link naar mijn 2e pagina in de map html-->
 
-            <!--img = plaatje, ook een inline-element-->
-            <img src="Ict1.jpeg" alt="Een computerchip met blauw licht">
+            <!--plaatje uit de map images-->
+            <img src="images/Ict1.jpeg" alt="Een computerchip met blauw licht">
 
         </div> <!--einde van de doos-->
 

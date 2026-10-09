@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!--dit is de pagina over kleurmodellen, hij staat in de map html-->
+<html> <!--dit is het html-element, hier staat de hele pagina in-->
+    <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
+        <title>Kleurmodellen</title> <!--de titel, die staat op het tabblad-->
+        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
+        <link rel="stylesheet" type="text/css" href="../css/opmaak.css"> <!--link naar mijn CSS. ../ = eerst 1 map omhoog, dan de map css in-->
+    </head>
+    <body> <!--de body: alles wat je ZIET op je site-->
+
+        <!--MENU met dropdown: 3 geneste lijsten.
+            ../ = eerst 1 map omhoog naar de hoofdmap.
+            Pagina's in dezelfde map (html) hebben geen pad nodig-->
+        <ul> <!--niveau 1: de donkerblauwe balk-->
+            <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
+            <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
+                <a href="#">Menu ▾</a> <!--href="#" = deze link gaat nergens heen, hij opent alleen het menu-->
+                <ul> <!--niveau 2: klapt open onder Menu-->
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="binairstelsel.html">◂ Onderwerpen</a>
+                        <ul> <!--niveau 3: klapt open naast Onderwerpen-->
+                            <li><a href="binairstelsel.html">Binair stelsel</a></li>
+                            <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
+        <div class="inhoud">
+
+            <p>Uitleg over kleurmodellen</p> <!--p = paragraaf-->
+
+            <p><a href="../index.html">Home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
+
+            <!--plaatje: ../ = 1 map omhoog, dan de map images in-->
+            <img src="../images/kleurmodellen.jpeg" alt="Plaatje over kleurmodellen">
+
+        </div> <!--einde van de doos-->
+
+    </body>
+</html>
