@@ -1,0 +1,70 @@
+/* opmaak.css = de opmaak van mijn hele website.
+   Elk .html-bestand linkt naar dit bestand in de <head>.
+   Mijn kleuren: donkerblauw (#0b2545) en oranje (#f28c28). */
+
+
+/* ---------- MENU ---------- */
+
+/* Code van w3schools (horizontaal menu).
+   ul = de hele lijst van het menu */
+ul {
+  list-style-type: none;       /* geen bolletjes */
+  margin: 0;                   /* geen ruimte BUITEN de lijst */
+  padding: 0;                  /* geen ruimte BINNEN de lijst */
+  overflow: hidden;
+  background-color: #0b2545;   /* EXPERIMENT: was #333 (grijs), ik koos donkerblauw */
+}
+
+/* li = 1 item van het menu.
+   float: left = alle items gaan NAAST elkaar staan in plaats van onder elkaar */
+li {
+  float: left;
+}
+
+/* li a = de links IN het menu */
+li a {
+  display: block;              /* het hele vakje is klikbaar, niet alleen de tekst */
+  color: white;                /* kleur van de tekst */
+  text-align: center;          /* tekst in het midden */
+  padding: 14px 16px;          /* ruimte binnen het vakje: 14px boven en onder, 16px links en rechts */
+  text-decoration: none;       /* geen streep onder de link */
+}
+
+/* li a:hover = de link als je muis erop staat.
+   EXPERIMENT: was #111 (zwart), ik koos oranje */
+li a:hover {
+  background-color: #f28c28;
+}
+
+
+/* ---------- INHOUD ---------- */
+
+/* .inhoud = de doos met class="inhoud" (de punt betekent: class) */
+.inhoud {
+  color: #0b2545;              /* donkerblauwe tekst */
+  padding: 16px;               /* ruimte binnen de doos, zodat de tekst niet tegen de rand zit */
+}
+
+/* EXPERIMENT: de links in de tekst een andere kleur geven (oranje) */
+.inhoud a {
+  color: #f28c28;
+}
+
+/* de plaatjes in de doos niet te groot maken */
+.inhoud img {
+  width: 300px;                /* 300 pixels breed */
+}
+
+
+/* ---------- OPGEZOCHT (vragen uit het document) ----------
+   1. color = de kleur van de TEKST.
+      background-color = de kleur van de ACHTERGROND.
+   2. display: block = het element wordt een block (een plank):
+      het neemt de hele breedte en het hele vlak is klikbaar.
+   3. li a:hover = de opmaak van een link in een lijst-item
+      op het moment dat de muis erop staat (hover = zweven).
+   4. padding: 8px 16px
+      a. padding = de ruimte BINNEN een element, tussen de rand en de inhoud.
+      b. px = pixels, de kleine puntjes waaruit je scherm bestaat.
+      c. 2 waardes: de 1e is voor boven en onder,
+         de 2e is voor links en rechts. */
