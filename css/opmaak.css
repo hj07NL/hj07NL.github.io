@@ -3,9 +3,12 @@
    Mijn kleuren: donkerblauw (#0b2545) en oranje (#f28c28). */
 
 /* body = de hele pagina.
-   margin: 0 = geen witte rand om de pagina, zodat de menubalk tegen de rand zit */
+   margin: 0 = geen witte rand om de pagina, zodat de menubalk tegen de rand zit
+   font-family = het lettertype. Arial is makkelijk te lezen. sans-serif = reserve als Arial er niet is */
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
+
 }
 /* ---------- MENU ---------- */
 
@@ -101,6 +104,79 @@ li:hover > ul {
   width: 300px;                /* 300 pixels breed */
 }
 
+
+/* ---------- HONINGRAAT (homepage, mijn ontwerp) ---------- */
+
+/* .honingraat = de hele doos met zeshoeken */
+.honingraat {
+  width: 660px;                /* breedte: 4 zeshoeken + een halve voor de verschoven rij */
+  margin: 40px auto;           /* 40px ruimte boven en onder. auto links en rechts = in het MIDDEN van de pagina */
+}
+
+/* .rij = 1 rij zeshoeken.
+   overflow: hidden zorgt dat de rij net zo hoog wordt als de zeshoeken erin (door float) */
+.rij {
+  overflow: hidden;
+}
+
+/* .rij.verschoven = een rij met BEIDE classes: rij en verschoven (de middelste rij).
+   POSITIONEREN: position: relative + left = schuif het element vanaf zijn eigen plek */
+.rij.verschoven {
+  position: relative;          /* ik ga deze rij verschuiven vanaf zijn eigen plek */
+  left: 73px;                  /* 73px naar rechts = een halve zeshoek */
+  margin-top: -36px;           /* een min-getal = naar boven, zodat de rijen in elkaar schuiven */
+  margin-bottom: -36px;        /* de rij eronder schuift ook omhoog */
+}
+
+/* .zeshoek = alles met class="zeshoek": de vorm en de tekst */
+.zeshoek {
+  float: left;                 /* POSITIONEREN: float: left = de zeshoeken staan NAAST elkaar */
+  width: 140px;                /* breedte van een zeshoek */
+  height: 162px;               /* hoogte: een zeshoek is iets hoger dan breed */
+  margin-right: 6px;           /* 6px ruimte tussen de zeshoeken */
+
+  /* clip-path knipt een vorm uit een vierkant blok, net als een koekjesvorm.
+     De 6 getallenparen zijn de 6 hoekpunten van de zeshoek (links-rechts boven-onder in procenten) */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+  /* display: flex + align-items + justify-content = de tekst precies in het MIDDEN */
+  display: flex;
+  align-items: center;         /* midden van boven naar beneden */
+  justify-content: center;     /* midden van links naar rechts */
+  text-align: center;          /* als de tekst op 2 regels staat, ook in het midden */
+
+  padding: 0 18px;             /* 0 boven en onder, 18px links en rechts, zodat tekst niet tegen de schuine rand komt */
+  box-sizing: border-box;      /* de padding telt mee in de 140px breedte */
+  color: white;                /* witte tekst */
+  font-weight: bold;           /* dikgedrukt */
+  text-decoration: none;       /* geen streep onder de link */
+}
+
+/* de KLEUREN van de zeshoeken (het 2e naamkaartje) */
+.onderwerp {
+  background-color: #f28c28;   /* oranje: de informatica-onderwerpen */
+}
+.hobby {
+  background-color: #1d4e89;   /* middenblauw: over mij */
+}
+.midden {
+  background-color: #0b2545;   /* donkerblauw: de middelste zeshoek met mijn naam */
+}
+
+/* .midden h1 = de h1 IN de middelste zeshoek */
+.midden h1 {
+  font-size: 24px;             /* grootte van de letters */
+  margin: 0;                   /* geen extra ruimte om de kop heen */
+}
+
+/* HOVER: de kleur wisselt als je muis op een zeshoek staat.
+   a.onderwerp = alleen een LINK (a) met class="onderwerp" */
+a.onderwerp:hover {
+  background-color: #0b2545;   /* oranje wordt donkerblauw */
+}
+a.hobby:hover {
+  background-color: #f28c28;   /* blauw wordt oranje */
+}
 
 /* ---------- OPGEZOCHT (vragen uit het document) ----------
    1. color = de kleur van de TEKST.

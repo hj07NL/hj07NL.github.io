@@ -7,25 +7,33 @@
     </head>
     <body> <!--de body: alles wat je ZIET op je site-->
 
-        <!--MENU met dropdown: 3 geneste lijsten.
-            ../ = eerst 1 map omhoog naar de hoofdmap.
-            Pagina's in dezelfde map (html) hebben geen pad nodig-->
-        <ul> <!--niveau 1: de donkerblauwe balk-->
+         <ul> <!--niveau 1: de donkerblauwe balk-->
             <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
             <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
                 <a href="#">Menu ▾</a> <!--href="#" = deze link gaat nergens heen, hij opent alleen het menu-->
                 <ul> <!--niveau 2: klapt open onder Menu-->
                     <li><a href="../index.html">Home</a></li>
                     <li>
-                        <a href="binairstelsel.html">◂ Onderwerpen</a>
-                        <ul> <!--niveau 3: klapt open naast Onderwerpen-->
+                        <a href="ivu.html">◂ Onderwerpen</a>
+                        <ul> <!--niveau 3: de onderwerpen-->
+                            <li><a href="ivu.html">Invoer, verwerking, uitvoer</a></li>
                             <li><a href="binairstelsel.html">Binair stelsel</a></li>
                             <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                            <li><a href="compressie.html">Compressie</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="ai.html">◂ AI</a>
+                        <ul> <!--niveau 3: de stukjes van de AI-pagina-->
+                            <li><a href="ai.html#wat">Wat is AI?</a></li>
+                            <li><a href="ai.html#gebruik">Hoe gebruik ik AI?</a></li>
+                            <li><a href="ai.html#iphone">AI in mijn Iphone 15</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
+
 
         <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
         <div class="inhoud">

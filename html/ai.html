@@ -1,13 +1,17 @@
-<!DOCTYPE html> <!--dit is de pagina over het binaire stelsel, hij staat in de map html-->
+<!DOCTYPE html> <!--dit is de pagina over AI, hij staat in de map html-->
 <html> <!--dit is het html-element, hier staat de hele pagina in-->
     <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
-        <title>Binair stelsel</title> <!--de titel, die staat op het tabblad-->
+        <title>AI</title> <!--de titel, die staat op het tabblad-->
         <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
         <link rel="stylesheet" type="text/css" href="../css/opmaak.css"> <!--link naar mijn CSS. ../ = eerst 1 map omhoog, dan de map css in-->
     </head>
     <body> <!--de body: alles wat je ZIET op je site-->
 
-         <ul> <!--niveau 1: de donkerblauwe balk-->
+        <!--MENU met dropdown: 3 geneste lijsten.
+            ../ = eerst 1 map omhoog naar de hoofdmap.
+            Pagina's in dezelfde map (html) hebben geen pad nodig.
+            # = spring naar een stukje van de pagina met dat id-->
+        <ul> <!--niveau 1: de donkerblauwe balk-->
             <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
             <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
                 <a href="#">Menu ▾</a> <!--href="#" = deze link gaat nergens heen, hij opent alleen het menu-->
@@ -34,16 +38,20 @@
             </li>
         </ul>
 
-
         <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
         <div class="inhoud">
 
-            <p>Uitleg over het binaire stelsel</p> <!--p = paragraaf-->
+            <!--h2 = een kopje (heading). id = een unieke naam, het menu springt hierheen met #wat-->
+            <h2 id="wat">Wat is AI?</h2>
+            <p>Uitleg over wat AI is</p>
+
+            <h2 id="gebruik">Hoe gebruik ik AI, en leer ik ervan?</h2>
+            <p>Uitleg over hoe ik AI gebruik</p>
+
+            <h2 id="iphone">AI in mijn Iphone 15</h2>
+            <p>Uitleg over welke AI er in mijn Iphone 15 zit</p>
 
             <p><a href="../index.html">Home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
-
-            <!--plaatje: ../ = 1 map omhoog, dan de map images in-->
-            <img src="../images/binair.jpeg" alt="Plaatje over het binaire stelsel">
 
         </div> <!--einde van de doos-->
 

@@ -7,9 +7,9 @@
     </head>
     <body> <!--de body: alles wat je ZIET op je site-->
 
-        <!--MENU met dropdown: 3 geneste lijsten (een lijst IN een lijst IN een lijst).
-            ul = de hele lijst, li = 1 item, a = de link.
-            html/ = de pagina staat in de map html-->
+        <!--MENU met dropdown: 3 geneste lijsten.
+            html/ = de pagina staat in de map html.
+            # = spring naar een stukje van de pagina met dat id-->
         <ul> <!--niveau 1: de donkerblauwe balk-->
             <li><a href="index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
             <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
@@ -17,22 +17,67 @@
                 <ul> <!--niveau 2: klapt open onder Menu-->
                     <li><a href="index.html">Home</a></li>
                     <li>
-                        <a href="html/binairstelsel.html">◂ Onderwerpen</a>
-                        <ul> <!--niveau 3: klapt open naast Onderwerpen-->
+                        <a href="html/ivu.html">◂ Onderwerpen</a>
+                        <ul> <!--niveau 3: de onderwerpen-->
+                            <li><a href="html/ivu.html">Invoer, verwerking, uitvoer</a></li>
                             <li><a href="html/binairstelsel.html">Binair stelsel</a></li>
                             <li><a href="html/kleurmodellen.html">Kleurmodellen</a></li>
+                            <li><a href="html/compressie.html">Compressie</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="html/ai.html">◂ AI</a>
+                        <ul> <!--niveau 3: de stukjes van de AI-pagina-->
+                            <li><a href="html/ai.html#wat">Wat is AI?</a></li>
+                            <li><a href="html/ai.html#gebruik">Hoe gebruik ik AI?</a></li>
+                            <li><a href="html/ai.html#iphone">AI in mijn iPhone 15</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
 
-        <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
-        <div class="inhoud">
+        <!--HONINGRAAT: mijn ontwerp. Een doos (div) met 3 rijen zeshoeken.
+            Elke rij is een div met class="rij".
+            Elke zeshoek is een link (a) met class="zeshoek".
+            Een zeshoek heeft 2 classes, met een spatie ertussen:
+            "zeshoek onderwerp" = de vorm van een zeshoek + de oranje kleur
+            "zeshoek hobby" = de vorm van een zeshoek + de blauwe kleur-->
+        <div class="honingraat">
 
+            <!--RIJ 1-->
+            <div class="rij">
+                <a class="zeshoek hobby" href="#over-mij">Natuur</a> <!--#over-mij = spring naar het stuk "Over mij" onderaan-->
+                <a class="zeshoek onderwerp" href="html/ivu.html">Invoer, verwerking, uitvoer</a>
+                <a class="zeshoek onderwerp" href="html/binairstelsel.html">Binair stelsel</a>
+                <a class="zeshoek onderwerp" href="html/ai.html#gebruik">Hoe gebruik ik AI?</a>
+            </div>
+
+            <!--RIJ 2: class="rij verschoven" = deze rij schuift een halve zeshoek naar rechts (zie opmaak.css)-->
+            <div class="rij verschoven">
+                <a class="zeshoek onderwerp" href="html/compressie.html">Compressie</a>
+                <div class="zeshoek midden"> <!--de middelste zeshoek: geen link maar een div, met mijn naam-->
+                    <h1>Ik ben Hai-Jun</h1> <!--h1 = de belangrijkste kop van de pagina-->
+                </div>
+                <a class="zeshoek onderwerp" href="html/ai.html">AI</a>
+                <a class="zeshoek onderwerp" href="html/kleurmodellen.html">Kleurmodellen</a>
+            </div>
+
+            <!--RIJ 3-->
+            <div class="rij">
+                <a class="zeshoek hobby" href="#over-mij">Familie en vrienden</a>
+                <a class="zeshoek hobby" href="#over-mij">Hockey</a>
+                <a class="zeshoek hobby" href="#over-mij">De Chinese Muur</a>
+                <a class="zeshoek onderwerp" href="html/ai.html#iphone">AI in mijn iPhone 15</a>
+            </div>
+
+        </div> <!--einde van de honingraat-->
+
+        <!--OVER MIJ: id="over-mij" = een bladwijzer. De blauwe hobby-zeshoeken springen hierheen-->
+        <div class="inhoud" id="over-mij">
+
+            <h2>Over mij</h2> <!--h2 = een kopje-->
             <p>Hoi, ik ben Hai-Jun. Welkom op mijn website!</p> <!--p = paragraaf-->
-
-            <p><a href="html/binairstelsel.html">Uitleg binair stelsel</a></p> <!--link naar mijn 2e pagina in de map html-->
 
             <!--plaatje uit de map images-->
             <img src="images/Ict1.jpeg" alt="Een computerchip met blauw licht">
