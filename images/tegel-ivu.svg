@@ -1,10 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 162">
-  <!--3 blokjes met pijlen: invoer, verwerking, uitvoer. Wit en half doorzichtig (opacity)-->
-  <g fill="none" stroke="#ffffff" stroke-width="4" opacity="0.35">
-    <rect x="10" y="66" width="30" height="30" rx="4"/>
-    <rect x="55" y="66" width="30" height="30" rx="4"/>
-    <rect x="100" y="66" width="30" height="30" rx="4"/>
-    <path d="M40 81 h12 M47 76 l5 5 -5 5"/>
-    <path d="M85 81 h12 M92 76 l5 5 -5 5"/>
+  <!--IVU van boven naar beneden: toetsenbord (invoer) → chip (verwerking) → beeldscherm (uitvoer)-->
+  <g fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.45">
+    <!--INVOER: toetsenbord bovenaan-->
+    <rect x="49" y="16" width="42" height="18" rx="3"/>
+    <path d="M55 22 h4 M63 22 h4 M71 22 h4 M79 22 h4 M55 28 h28"/>
+    <!--pijl naar beneden-->
+    <path d="M70 37 v8 M66 41 l4 4 4 -4"/>
+    <!--UITVOER: beeldscherm onderaan-->
+    <rect x="52" y="120" width="36" height="22" rx="3"/>
+    <path d="M70 142 v5 M63 148 h14"/>
+    <!--pijl naar beneden-->
+    <path d="M70 108 v8 M66 112 l4 4 4 -4"/>
+  </g>
+  <!--VERWERKING: grote chip achter de tekst, heel licht-->
+  <g fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.2">
+    <rect x="40" y="52" width="60" height="52" rx="5"/>
+    <path d="M52 52 v-4 M64 52 v-4 M76 52 v-4 M88 52 v-4 M52 104 v4 M64 104 v4 M76 104 v4 M88 104 v4
+             M40 64 h-4 M40 78 h-4 M40 92 h-4 M100 64 h4 M100 78 h4 M100 92 h4"/>
   </g>
 </svg>
