@@ -31,27 +31,136 @@
                         <ul> <!--niveau 3: de stukjes van de AI-pagina-->
                             <li><a href="ai.html#wat">Wat is AI?</a></li>
                             <li><a href="ai.html#gebruik">Hoe gebruik ik AI?</a></li>
-                            <li><a href="ai.html#iphone">AI in mijn Iphone 15</a></li>
+                            <li><a href="ai.html#iphone">AI in mijn iPhone 15</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
 
+        <!--PAGINAKOP: de blauwe balk met de titel van deze pagina-->
+        <div class="paginakop">
+            <h1>AI</h1> <!--h1 = de belangrijkste kop van deze pagina-->
+            <p>Kunstmatige intelligentie: wat is het en waar kom ik het tegen?</p>
+        </div>
+
         <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
         <div class="inhoud">
 
-            <!--h2 = een kopje (heading). id = een unieke naam, het menu springt hierheen met #wat-->
-            <h2 id="wat">Wat is AI?</h2>
-            <p>Uitleg over wat AI is</p>
+            <!-- ===== BLOK 1: WAT IS AI ===== -->
+            <!--id="wat" = een bladwijzer. Het menu springt hierheen met ai.html#wat-->
+            <div class="blok" id="wat">
+                <h2>Wat is AI?</h2> <!--h2 = een kopje-->
+                <p><b>AI</b> staat voor <i>Artificial Intelligence</i>, in het Nederlands <b>kunstmatige intelligentie</b>.
+                   Het zijn computerprogramma's die dingen kunnen die lijken op denken: gezichten herkennen, spraak verstaan,
+                   teksten schrijven of voorspellen welke video je leuk vindt.</p>
+                <p>Een gewoon programma volgt regels die een programmeur heeft bedacht. Een AI <b>leert zelf</b> van heel veel voorbeelden.
+                   Dat heet <b>machine learning</b> (machinaal leren).</p>
 
-            <h2 id="gebruik">Hoe gebruik ik AI, en leer ik ervan?</h2>
-            <p>Uitleg over hoe ik AI gebruik</p>
+                <!--SCHEMA: dezelfde opmaak als op de IVU-pagina (class="schema", "stap" en "pijl")-->
+                <div class="schema">
+                    <div class="stap">
+                        <h3>Voorbeelden</h3> <!--h3 = een kleiner kopje-->
+                        <p>Duizenden foto's met het label "kat" of "hond"</p>
+                    </div>
+                    <div class="pijl">→</div>
+                    <div class="stap">
+                        <h3>Trainen</h3>
+                        <p>De AI zoekt zelf naar patronen</p>
+                    </div>
+                    <div class="pijl">→</div>
+                    <div class="stap">
+                        <h3>Voorspellen</h3>
+                        <p>Bij een nieuwe foto zegt de AI: "kat!"</p>
+                    </div>
+                </div>
 
-            <h2 id="iphone">AI in mijn Iphone 15</h2>
-            <p>Uitleg over welke AI er in mijn Iphone 15 zit</p>
+                <div class="uitleg"> <!--oranje vakje met uitleg van moeilijke woorden-->
+                    <p><b>Moeilijke woorden</b><br> <!--br = nieuwe regel-->
+                       <b>Trainen</b> = de AI heel veel voorbeelden laten zien, zodat hij patronen leert herkennen.<br>
+                       <b>Model</b> = wat de AI na het trainen heeft geleerd. Dat model gebruik je daarna om voorspellingen te doen.<br>
+                       <b>Neuraal netwerk</b> = een soort AI die (een beetje) werkt zoals de hersenen: met heel veel verbonden "neuronen" die samen rekenen.<br>
+                       <b>Generatieve AI</b> = AI die iets nieuws maakt, zoals tekst (ChatGPT, Claude) of plaatjes.</p>
+                </div>
+            </div>
 
-            <p><a href="../index.html">Home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
+            <!-- ===== BLOK 2: AI OM ME HEEN ===== -->
+            <div class="blok">
+                <h2>Waar kom je AI tegen?</h2>
+                <!--TABEL: tr = rij, th = kopcel, td = gewone cel-->
+                <table>
+                    <tr> <th>Waar?</th>                    <th>Wat doet de AI?</th> </tr>
+                    <tr> <td>YouTube, TikTok, Spotify</td>   <td>Voorspelt welke video's of liedjes jij leuk vindt</td> </tr>
+                    <tr> <td>Spraakassistent (Siri)</td>     <td>Verstaat wat je zegt en zoekt een antwoord</td> </tr>
+                    <tr> <td>Camera en foto's</td>           <td>Maakt foto's mooier en herkent gezichten</td> </tr>
+                    <tr> <td>Chatbots (ChatGPT, Claude)</td> <td>Schrijven teksten en beantwoorden vragen</td> </tr>
+                    <tr> <td>Navigatie</td>                  <td>Voorspelt files en kiest de snelste route</td> </tr>
+                </table>
+            </div>
+
+            <!-- ===== BLOK 3: MIJN IPHONE 15 ===== -->
+            <!--id="iphone" = een bladwijzer. Het menu springt hierheen met ai.html#iphone-->
+            <div class="blok" id="iphone">
+                <h2>AI in mijn iPhone 15</h2>
+                <p>In mijn iPhone 15 zit de <b>A16 Bionic</b>-chip. Een deel van die chip is speciaal gemaakt voor AI:
+                   de <b>Neural Engine</b> (16 kernen). Die kan heel snel de berekeningen doen die AI nodig heeft,
+                   en dat gebeurt gewoon op de telefoon zelf, zonder internet.</p>
+                <table>
+                    <tr> <th>Functie</th>         <th>Wat doet de AI?</th> </tr>
+                    <tr> <td>Face ID</td>         <td>Herkent mijn gezicht om de telefoon te ontgrendelen, ook met een pet op of in het donker</td> </tr>
+                    <tr> <td>Camera</td>          <td>Maakt van meerdere foto's tegelijk 1 scherpe foto, en ziet zelf of er een persoon in beeld is voor een portretfoto</td> </tr>
+                    <tr> <td>Foto's-app</td>      <td>Herkent personen, dieren en dingen, zodat je kunt zoeken op bijvoorbeeld "hond" of "strand"</td> </tr>
+                    <tr> <td>Tekst in foto's</td> <td>Herkent tekst op een foto, zodat je die kunt kopiëren</td> </tr>
+                    <tr> <td>Toetsenbord</td>     <td>Voorspelt het volgende woord en verbetert typfouten</td> </tr>
+                    <tr> <td>Siri</td>            <td>Verstaat wat ik zeg</td> </tr>
+                </table>
+                <div class="uitleg">
+                    <p><b>Waarom heeft mijn iPhone 15 geen Apple Intelligence?</b><br>
+                       Apple Intelligence is de nieuwste AI van Apple. Die werkt pas vanaf de iPhone 15 <b>Pro</b>.
+                       Die AI draait op de telefoon zelf en heeft meer werkgeheugen (RAM) en een snellere chip nodig.
+                       De gewone iPhone 15 heeft 6 GB RAM, en voor Apple Intelligence is 8 GB nodig.</p>
+                </div>
+            </div>
+
+            <!-- ===== BLOK 4: HOE GEBRUIK IK AI ===== -->
+            <!--id="gebruik" = een bladwijzer. Het menu springt hierheen met ai.html#gebruik-->
+            <div class="blok" id="gebruik">
+                <h2>Hoe gebruik ik AI, en leer ik ervan?</h2>
+                <p>VUL ZELF IN: waarvoor gebruik jij AI? Bijvoorbeeld voor school, uitleg, vertalen of iets anders.</p> <!--VUL ZELF IN-->
+                <p>Voor deze website heb ik hulp gehad van een AI-assistent. Die legde stap voor stap uit hoe HTML en CSS werken,
+                   en gaf voorbeeldcode. Ik heb de code zelf in mijn bestanden gezet, aangepast en getest.</p>
+                <p><b>Leer ik ervan?</b> VUL ZELF IN: wanneer leer je er wel van, en wanneer niet?</p> <!--VUL ZELF IN-->
+
+                <h3>Voor- en nadelen van AI</h3> <!--h3 = een kleiner kopje-->
+                <table>
+                    <tr> <th>Voordelen</th>                                         <th>Nadelen</th> </tr>
+                    <tr> <td>Snel uitleg krijgen, ook als de docent er niet is</td> <td>AI kan fouten maken en dat heel zeker brengen</td> </tr>
+                    <tr> <td>Uitleg op je eigen niveau</td>                         <td>Als je alles laat doen, leer je zelf niets</td> </tr>
+                    <tr> <td>Helpt bij lastige taken, zoals code schrijven</td>     <td>Privacy: wat je typt, komt bij een bedrijf terecht</td> </tr>
+                </table>
+            </div>
+
+            <!-- ===== BLOK 5: OEFENEN ===== -->
+            <div class="blok">
+                <h2>Oefenen</h2>
+                <p>Denk eerst zelf na en klik daarna op de vraag om het antwoord te zien.</p>
+
+                <!--details = een uitklapblok. summary = de vraag die je altijd ziet. De rest zie je pas na een klik-->
+                <details>
+                    <summary>1. Wat is het verschil tussen een gewoon programma en AI?</summary>
+                    <p>Een gewoon programma volgt <b>regels</b> van een programmeur. Een AI <b>leert zelf</b> van voorbeelden.</p>
+                </details>
+                <details>
+                    <summary>2. Wat is de Neural Engine in mijn iPhone?</summary>
+                    <p>Een deel van de chip dat speciaal gemaakt is voor <b>AI-berekeningen</b>, zoals Face ID.</p>
+                </details>
+                <details>
+                    <summary>3. Waarom kun je niet alles geloven wat een chatbot zegt?</summary>
+                    <p>Een chatbot <b>voorspelt</b> welke woorden goed passen. Dat klinkt slim, maar het kan ook gewoon fout zijn. Controleer het dus altijd.</p>
+                </details>
+            </div>
+
+            <p><a href="../index.html">Terug naar home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
 
         </div> <!--einde van de doos-->
 
