@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 162">
+  <!--3 blokjes met pijlen: invoer, verwerking, uitvoer. Wit en half doorzichtig (opacity)-->
+  <g fill="none" stroke="#ffffff" stroke-width="4" opacity="0.35">
+    <rect x="10" y="66" width="30" height="30" rx="4"/>
+    <rect x="55" y="66" width="30" height="30" rx="4"/>
+    <rect x="100" y="66" width="30" height="30" rx="4"/>
+    <path d="M40 81 h12 M47 76 l5 5 -5 5"/>
+    <path d="M85 81 h12 M92 76 l5 5 -5 5"/>
+  </g>
+</svg>

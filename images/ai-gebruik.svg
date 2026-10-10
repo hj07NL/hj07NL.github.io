@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 162">
+  <!--2 tekstballonnen: een gesprek met een chatbot-->
+  <g fill="#ffffff" opacity="0.3">
+    <rect x="12" y="28" width="70" height="36" rx="10"/>
+    <path d="M24 64 l0 12 l12 -12 z"/>
+    <rect x="58" y="98" width="70" height="36" rx="10"/>
+    <path d="M116 134 l0 12 l-12 -12 z"/>
+  </g>
+</svg>

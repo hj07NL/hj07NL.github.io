@@ -38,49 +38,75 @@
         </ul>
 
         <!--HONINGRAAT: mijn ontwerp. Een doos (div) met 3 rijen zeshoeken.
-            Elke rij is een div met class="rij".
-            Elke zeshoek is een link (a) met class="zeshoek".
-            Een zeshoek heeft 2 classes, met een spatie ertussen:
-            "zeshoek onderwerp" = de vorm van een zeshoek + de oranje kleur
-            "zeshoek hobby" = de vorm van een zeshoek + de blauwe kleur-->
+            Elke rij is een div met class="rij". Elke zeshoek is een link (a) met class="zeshoek".
+            Elke zeshoek heeft 3 classes, met spaties ertussen:
+            1. "zeshoek"              = de vorm van een zeshoek
+            2. "onderwerp" of "hobby" = de kleur: oranje (informatica) of blauw (over mij)
+            3. "tegel-..."            = de achtergrondafbeelding van die zeshoek (zie opmaak.css)-->
         <div class="honingraat">
 
             <!--RIJ 1-->
             <div class="rij">
-                <a class="zeshoek hobby" href="#over-mij">Natuur</a> <!--#over-mij = spring naar het stuk "Over mij" onderaan-->
-                <a class="zeshoek onderwerp" href="html/ivu.html">Invoer, verwerking, uitvoer</a>
-                <a class="zeshoek onderwerp" href="html/binairstelsel.html">Binair stelsel</a>
-                <a class="zeshoek onderwerp" href="html/ai.html#gebruik">Hoe gebruik ik AI?</a>
+                <a class="zeshoek hobby tegel-natuur" href="#natuur">Natuur</a> <!--#natuur = spring naar het stuk over natuur onderaan-->
+                <a class="zeshoek onderwerp tegel-ivu" href="html/ivu.html">Invoer, verwerking, uitvoer</a>
+                <a class="zeshoek onderwerp tegel-binair" href="html/binairstelsel.html">Binair stelsel</a>
+                <a class="zeshoek onderwerp tegel-ai-gebruik" href="html/ai.html#gebruik">Hoe gebruik ik AI?</a>
             </div>
 
             <!--RIJ 2: class="rij verschoven" = deze rij schuift een halve zeshoek naar rechts (zie opmaak.css)-->
             <div class="rij verschoven">
-                <a class="zeshoek onderwerp" href="html/compressie.html">Compressie</a>
+                <a class="zeshoek onderwerp tegel-compressie" href="html/compressie.html">Compressie</a>
                 <div class="zeshoek midden"> <!--de middelste zeshoek: geen link maar een div, met mijn naam-->
                     <h1>Ik ben Hai-Jun</h1> <!--h1 = de belangrijkste kop van de pagina-->
                 </div>
-                <a class="zeshoek onderwerp" href="html/ai.html">AI</a>
-                <a class="zeshoek onderwerp" href="html/kleurmodellen.html">Kleurmodellen</a>
+                <a class="zeshoek onderwerp tegel-ai" href="html/ai.html">AI</a>
+                <a class="zeshoek onderwerp tegel-kleur" href="html/kleurmodellen.html">Kleurmodellen</a>
             </div>
 
             <!--RIJ 3-->
             <div class="rij">
-                <a class="zeshoek hobby" href="#over-mij">Familie en vrienden</a>
-                <a class="zeshoek hobby" href="#over-mij">Hockey</a>
-                <a class="zeshoek hobby" href="#over-mij">De Chinese Muur</a>
-                <a class="zeshoek onderwerp" href="html/ai.html#iphone">AI in mijn iPhone 15</a>
+                <a class="zeshoek hobby tegel-familie" href="#familie">Familie en vrienden</a>
+                <a class="zeshoek hobby tegel-hockey" href="#hockey">Hockey</a>
+                <a class="zeshoek hobby tegel-afkomst" href="#afkomst">Mijn afkomst</a>
+                <a class="zeshoek onderwerp tegel-iphone" href="html/ai.html#iphone">AI in mijn iPhone 15</a>
             </div>
 
         </div> <!--einde van de honingraat-->
 
-        <!--OVER MIJ: id="over-mij" = een bladwijzer. De blauwe hobby-zeshoeken springen hierheen-->
+        <!--OVER MIJ: elk onderwerp in een eigen wit blok (class="blok").
+            Elk blok heeft een id (een bladwijzer). De blauwe zeshoeken springen hierheen, bijvoorbeeld met href="#hockey"-->
         <div class="inhoud" id="over-mij">
 
-            <h2>Over mij</h2> <!--h2 = een kopje-->
-            <p>Hoi, ik ben Hai-Jun. Welkom op mijn website!</p> <!--p = paragraaf-->
+            <div class="blok">
+                <h2>Over mij</h2> <!--h2 = een kopje-->
+                <p>Hoi, ik ben Hai-Jun! Ik ben 16 jaar en zit in 4 havo op het Vlietland College.
+                   Ik vind informatica leuk, omdat je leert hoe je zelf een website bouwt. Dat vind ik interessant.
+                   Deze website heb ik zelf gemaakt met HTML en CSS.</p>
+            </div>
 
-            <!--plaatje uit de map images-->
-            <img src="images/Ict1.jpeg" alt="Een computerchip met blauw licht">
+            <div class="blok" id="hockey">
+                <h2>Hockey</h2>
+                <p>Ik hockey bij hockeyclub Forescate in de JO18-2. Meestal speel ik rechtsachter.
+                   Ik hockey al sinds mijn 6e, dus al ongeveer 10 jaar. Ik train 2 keer per week en speel bijna elke zaterdag een wedstrijd.
+                   Wat ik zo leuk vind aan hockey? Ik kan er mijn energie in kwijt!</p>
+            </div>
+
+            <div class="blok" id="natuur">
+                <h2>Natuur</h2>
+                <p>Ik fiets weleens met mijn ouders. Op vakantie wandel ik veel, door de stad maar ook in de natuur.</p>
+            </div>
+
+            <div class="blok" id="familie">
+                <h2>Familie en vrienden</h2>
+                <p>Ik woon samen met mijn ouders. Mijn broer woont in Rotterdam.
+                   Mijn ouders en mijn broer komen graag kijken bij mijn hockeywedstrijden.</p>
+            </div>
+
+            <div class="blok" id="afkomst">
+                <h2>Mijn afkomst</h2>
+                <p>Ik ben geboren in Fangchenggang, een havenstad in het zuiden van China, vlak bij Vietnam.
+                   Ik ben geadopteerd en woon nu in Nederland.</p>
+            </div>
 
         </div> <!--einde van de doos-->
 

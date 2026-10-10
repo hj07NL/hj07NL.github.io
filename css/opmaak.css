@@ -186,6 +186,37 @@ a.hobby:hover {
   background-color: #f28c28;   /* blauw wordt oranje */
 }
 
+/* ---------- AFBEELDINGEN IN DE ZESHOEKEN ---------- */
+
+/* elke zeshoek: de achtergrondafbeelding vult de hele zeshoek */
+.zeshoek {
+  background-size: cover;                       /* cover = de afbeelding vult de hele zeshoek, zonder lege randen */
+  background-position: center;                  /* het midden van de afbeelding staat in het midden van de zeshoek */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);    /* een zacht schaduwtje achter de tekst, zodat hij beter leesbaar is */
+}
+
+/* TEKENINGEN (svg): wit en half doorzichtig, de kleur van de zeshoek schijnt erdoorheen.
+   url("...") = waar de afbeelding staat. ../ = vanuit de map css eerst 1 map omhoog, dan de map images in */
+.tegel-ivu        { background-image: url("../images/tegel-ivu.svg"); }
+.tegel-binair     { background-image: url("../images/tegel-binair.svg"); }
+.tegel-ai-gebruik { background-image: url("../images/tegel-ai-gebruik.svg"); }
+.tegel-compressie { background-image: url("../images/tegel-compressie.svg"); }
+.tegel-kleur      { background-image: url("../images/tegel-kleur.svg"); }
+.tegel-familie    { background-image: url("../images/tegel-familie.svg"); }
+
+/* FOTO'S met een gekleurd laagje eroverheen.
+   linear-gradient(kleur, kleur) = een laagje van 1 kleur. Die ligt BOVENOP de foto (wat eerst staat, ligt bovenop).
+   rgba(242, 140, 40, 0.6) = oranje, 60% ondoorzichtig. rgba(29, 78, 137, 0.6) = middenblauw, 60% ondoorzichtig */
+.tegel-ai      { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ai.jpg"); }
+.tegel-iphone  { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/iphone15.jpg"); }
+.tegel-natuur  { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/natuur.jpg"); }
+.tegel-hockey  { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/hockey.jpg"); }
+.tegel-afkomst { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/afkomst.jpg"); }
+
+/* muis op een zeshoek: hij wordt iets lichter. filter: brightness(1.2) = 20% feller */
+a.zeshoek:hover {
+  filter: brightness(1.2);
+}
 /* ---------- PAGINA'S MET UITLEG (bijvoorbeeld kleurmodellen) ---------- */
 
 /* lichtgrijze achtergrond voor de hele site, zodat de witte blokken opvallen.

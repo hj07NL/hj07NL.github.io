@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 162">
+  <!--3 poppetjes: een hoofd (cirkel) en een lijf (halve cirkel)-->
+  <g fill="#ffffff" opacity="0.3">
+    <circle cx="40" cy="52" r="12"/>  <path d="M20 92 a20 20 0 0 1 40 0 z"/>
+    <circle cx="70" cy="44" r="14"/>  <path d="M47 92 a23 23 0 0 1 46 0 z"/>
+    <circle cx="100" cy="52" r="12"/> <path d="M80 92 a20 20 0 0 1 40 0 z"/>
+  </g>
+</svg>
