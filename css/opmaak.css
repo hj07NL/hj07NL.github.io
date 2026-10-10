@@ -293,6 +293,27 @@ summary {
   color: #0b2545;
   cursor: pointer;
 }
+
+/* ---------- KNOP-LINK (binair-pagina) ---------- */
+
+/* .inhoud a.spelknop = een link met class="spelknop" in de inhoud.
+   Een link is een inline-element. Met display: inline-block kun je hem ook padding en afgeronde hoeken geven,
+   zodat hij eruitziet als een knop */
+.inhoud a.spelknop {
+  display: inline-block;         /* inline-block = blijft op de regel staan, maar gedraagt zich als een blokje */
+  background-color: #f28c28;     /* achtergrondkleur: oranje */
+  color: white;                  /* tekstkleur: wit */
+  font-weight: bold;             /* dikgedrukt */
+  font-size: 18px;               /* lettergrootte */
+  padding: 12px 24px;            /* ruimte binnen de knop: 12px boven en onder, 24px links en rechts */
+  border-radius: 25px;           /* hele ronde hoeken: een "pil"-vorm */
+  text-decoration: none;         /* geen streep onder de link */
+}
+
+/* als de muis op de knop staat: donkerblauw */
+.inhoud a.spelknop:hover {
+  background-color: #0b2545;
+}
 /* ---------- OPGEZOCHT (vragen uit het document) ----------
    1. color = de kleur van de TEKST.
       background-color = de kleur van de ACHTERGROND.
