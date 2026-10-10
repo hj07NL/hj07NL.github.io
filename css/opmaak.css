@@ -325,6 +325,44 @@ summary {
   border: none;                  /* geen rand om het venster */
   border-radius: 8px;            /* afgeronde hoeken */
 }
+
+/* ---------- SCHEMA (IVU-pagina) ---------- */
+
+/* .schema = de doos met de 3 blokken en de pijlen.
+   overflow: hidden = de doos wordt zo hoog als de blokken erin (door float) */
+.schema {
+  overflow: hidden;
+  margin-bottom: 16px;           /* ruimte onder het schema */
+}
+
+/* .schema .stap = een blok IN het schema (Invoer, Verwerking, Uitvoer) */
+.schema .stap {
+  float: left;                   /* POSITIONEREN: de blokken staan naast elkaar */
+  width: 26%;                    /* breedte: 26% van het schema. 3 blokken = 78% */
+  min-height: 128px;             /* minimale hoogte, zodat alle 3 de blokken even hoog zijn */
+  background-color: #1d4e89;     /* achtergrondkleur: middenblauw */
+  color: white;                  /* tekstkleur: wit */
+  text-align: center;            /* tekst in het midden */
+  border-radius: 10px;           /* afgeronde hoeken */
+  padding: 4px 8px;              /* ruimte binnen het blok */
+  box-sizing: border-box;        /* de padding telt mee in de breedte */
+}
+
+/* het kopje in een blok: oranje */
+.schema .stap h3 {
+  margin: 8px 0 4px 0;           /* ruimte: boven, rechts, onder, links */
+  color: #f28c28;                /* tekstkleur: oranje */
+}
+
+/* .schema .pijl = een pijl tussen de blokken */
+.schema .pijl {
+  float: left;                   /* naast de blokken */
+  width: 11%;                    /* 2 pijlen = 22%. Samen met de blokken: 78% + 22% = 100% */
+  text-align: center;            /* pijl in het midden */
+  font-size: 40px;               /* grote pijl */
+  color: #f28c28;                /* oranje */
+  padding-top: 30px;             /* ruimte boven de pijl, zodat hij in het midden van de hoogte staat */
+}
 /* ---------- OPGEZOCHT (vragen uit het document) ----------
    1. color = de kleur van de TEKST.
       background-color = de kleur van de ACHTERGROND.

@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!--dit is de pagina over het binaire stelsel, hij staat in de map html-->
+<!DOCTYPE html> <!--dit is de pagina over invoer, verwerking en uitvoer, hij staat in de map html-->
 <html> <!--dit is het html-element, hier staat de hele pagina in-->
     <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
         <title>Invoer, verwerking, uitvoer</title> <!--de titel, die staat op het tabblad-->
@@ -9,7 +9,8 @@
 
         <!--MENU met dropdown: 3 geneste lijsten.
             ../ = eerst 1 map omhoog naar de hoofdmap.
-            Pagina's in dezelfde map (html) hebben geen pad nodig-->
+            Pagina's in dezelfde map (html) hebben geen pad nodig.
+            # = spring naar een stukje van de pagina met dat id-->
         <ul> <!--niveau 1: de donkerblauwe balk-->
             <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
             <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
@@ -30,20 +31,103 @@
                         <ul> <!--niveau 3: de stukjes van de AI-pagina-->
                             <li><a href="ai.html#wat">Wat is AI?</a></li>
                             <li><a href="ai.html#gebruik">Hoe gebruik ik AI?</a></li>
-                            <li><a href="ai.html#iphone">AI in mijn Iphone 15</a></li>
+                            <li><a href="ai.html#iphone">AI in mijn iPhone 15</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
 
+        <!--PAGINAKOP: de blauwe balk met de titel van deze pagina-->
+        <div class="paginakop">
+            <h1>Invoer, verwerking, uitvoer</h1> <!--h1 = de belangrijkste kop van deze pagina-->
+            <p>Wat doet een computer eigenlijk?</p>
+        </div>
 
         <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
         <div class="inhoud">
 
-            <p>Uitleg over invoer, verwerking en uitvoer</p> <!--p = paragraaf-->
+            <!-- ===== BLOK 1: HET IVU-MODEL ===== -->
+            <div class="blok">
+                <h2>Het IVU-model</h2> <!--h2 = een kopje-->
+                <p>Elke computer werkt in 3 stappen. Dit heet het <b>IVU-model</b>:</p>
 
-            <p><a href="../index.html">Home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
+                <!--SCHEMA: 3 blokken (div) naast elkaar met float: left, met pijlen ertussen.
+                    class="stap" = een blok, class="pijl" = een pijl (zie opmaak.css)-->
+                <div class="schema">
+                    <div class="stap">
+                        <h3>Invoer</h3> <!--h3 = een kleiner kopje-->
+                        <p>Gegevens gaan de computer <b>in</b></p>
+                    </div>
+                    <div class="pijl">→</div>
+                    <div class="stap">
+                        <h3>Verwerking</h3>
+                        <p>De computer <b>rekent</b> met de gegevens</p>
+                    </div>
+                    <div class="pijl">→</div>
+                    <div class="stap">
+                        <h3>Uitvoer</h3>
+                        <p>Het resultaat komt de computer <b>uit</b></p>
+                    </div>
+                </div>
+
+                <p>Vaak hoort er nog een 4e stap bij: <b>opslag</b>. Dan bewaar je gegevens voor later,
+                   bijvoorbeeld op een SSD of harde schijf.</p>
+            </div>
+
+            <!-- ===== BLOK 2: APPARATEN ===== -->
+            <div class="blok">
+                <h2>Welke onderdelen horen waarbij?</h2>
+                <!--TABEL: tr = rij, th = kopcel, td = gewone cel-->
+                <table>
+                    <tr> <th>Stap</th>       <th>Onderdelen</th> </tr>
+                    <tr> <td>Invoer</td>     <td>Toetsenbord, muis, microfoon, camera, touchscreen, scanner, sensoren</td> </tr>
+                    <tr> <td>Verwerking</td> <td>Processor (CPU), werkgeheugen (RAM), videokaart (GPU)</td> </tr>
+                    <tr> <td>Uitvoer</td>    <td>Beeldscherm, printer, speakers, koptelefoon</td> </tr>
+                    <tr> <td>Opslag</td>     <td>SSD, harde schijf, USB-stick, cloud</td> </tr>
+                </table>
+                <div class="uitleg"> <!--oranje vakje met uitleg-->
+                    <p><b>Wat is wat?</b><br> <!--br = nieuwe regel-->
+                       <b>Processor (CPU)</b> = het "brein" van de computer: voert alle berekeningen uit.<br>
+                       <b>Werkgeheugen (RAM)</b> = het "kladblok": onthoudt alleen zolang de computer aan staat.<br>
+                       <b>Videokaart (GPU)</b> = rekent alles uit wat je op je scherm ziet, zoals bij games.<br>
+                       <b>SSD</b> = opslag die ook bewaard blijft als de computer uit gaat.</p>
+                </div>
+            </div>
+
+            <!-- ===== BLOK 3: VOORBEELDEN ===== -->
+            <div class="blok">
+                <h2>Voorbeelden uit het dagelijks leven</h2>
+                <table>
+                    <tr> <th>Voorbeeld</th>                  <th>Invoer</th>             <th>Verwerking</th>                                    <th>Uitvoer</th> </tr>
+                    <tr> <td>Foto maken met mijn iPhone</td> <td>Camera</td>             <td>Chip maakt de foto mooier en comprimeert hem</td>  <td>Foto op het scherm</td> </tr>
+                    <tr> <td>Een game spelen</td>            <td>Controller of muis</td> <td>CPU en GPU berekenen het nieuwe beeld</td>         <td>Beeld en geluid</td> </tr>
+                    <tr> <td>Siri iets vragen</td>           <td>Microfoon</td>          <td>Spraak wordt herkend en een antwoord gezocht</td>  <td>Siri praat terug</td> </tr>
+                    <tr> <td>Rekenmachine: 3 + 4</td>        <td>Toetsen 3, +, 4</td>    <td>Optellen</td>                                      <td>Scherm toont 7</td> </tr>
+                </table>
+            </div>
+
+            <!-- ===== BLOK 4: OEFENEN ===== -->
+            <div class="blok">
+                <h2>Oefenen</h2>
+                <p>Denk eerst zelf na en klik daarna op de vraag om het antwoord te zien.</p>
+
+                <!--details = een uitklapblok. summary = de vraag die je altijd ziet. De rest zie je pas na een klik-->
+                <details>
+                    <summary>1. Is een touchscreen invoer of uitvoer?</summary>
+                    <p><b>Allebei!</b> Je tikt erop (invoer) en het laat beeld zien (uitvoer).</p>
+                </details>
+                <details>
+                    <summary>2. Wat is het verschil tussen RAM en een SSD?</summary>
+                    <p>RAM is <b>tijdelijk</b> werkgeheugen en wordt leeg als de computer uit gaat. Een SSD <b>bewaart</b> je bestanden ook als hij uit staat.</p>
+                </details>
+                <details>
+                    <summary>3. Je print een werkstuk. Welke stappen van het IVU-model zie je?</summary>
+                    <p>Invoer: je klikt op printen. Verwerking: de computer maakt de pagina's klaar. Uitvoer: de <b>printer</b> drukt het af.</p>
+                </details>
+            </div>
+
+            <p><a href="../index.html">Terug naar home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
 
         </div> <!--einde van de doos-->
 
