@@ -185,6 +185,114 @@ a.onderwerp:hover {
 a.hobby:hover {
   background-color: #f28c28;   /* blauw wordt oranje */
 }
+
+/* ---------- PAGINA'S MET UITLEG (bijvoorbeeld kleurmodellen) ---------- */
+
+/* lichtgrijze achtergrond voor de hele site, zodat de witte blokken opvallen.
+   Je mag dezelfde selector (body) vaker gebruiken: de browser voegt de regels samen */
+body {
+  background-color: #f4f6fa;     /* achtergrondkleur: heel lichtgrijs-blauw */
+}
+
+/* .paginakop = de blauwe balk met de titel bovenaan een pagina */
+.paginakop {
+  background-color: #1d4e89;     /* achtergrondkleur: middenblauw */
+  color: white;                  /* tekstkleur: wit */
+  padding: 40px 20px;            /* 40px boven en onder, 20px links en rechts */
+  text-align: center;            /* tekst in het midden */
+}
+.paginakop h1 {
+  margin: 0;                     /* geen extra ruimte om de titel */
+  font-size: 40px;               /* lettergrootte */
+}
+.paginakop p {
+  margin: 8px 0 0 0;             /* 4 waardes: boven, rechts, onder, links */
+  font-size: 18px;
+}
+
+/* .inhoud = de doos met alle tekst: maximaal 900px breed en in het midden.
+   Deze regels komen bij de .inhoud-regels die er al stonden */
+.inhoud {
+  max-width: 900px;              /* breedte: maximaal 900 pixels, dan zijn de regels niet te lang */
+  margin: 0 auto;                /* auto links en rechts = in het midden */
+  line-height: 1.6;              /* hoogte van een regel: 1,6 keer de lettergrootte, leest prettiger */
+}
+
+/* .blok = een wit blok voor 1 onderwerp */
+.blok {
+  background-color: white;
+  border-left: 6px solid #f28c28;   /* oranje streep links: 6px dik, doorgetrokken lijn */
+  border-radius: 10px;              /* afgeronde hoeken */
+  padding: 8px 24px 16px 24px;      /* ruimte binnen het blok: boven, rechts, onder, links */
+  margin: 24px 0;                   /* 24px ruimte boven en onder */
+  box-shadow: 0 2px 6px rgba(11, 37, 69, 0.15); /* zachte schaduw. rgba = rgb + doorzichtigheid (0.15 = 15%) */
+}
+.blok h2 {
+  color: #0b2545;                /* tekstkleur van de kopjes: donkerblauw */
+}
+
+/* .uitleg = een licht-oranje vakje voor een rekenvoorbeeld */
+.uitleg {
+  background-color: #fdf0e3;     /* heel licht oranje */
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
+/* img.groot = een plaatje met class="groot" */
+.inhoud img.groot {
+  width: 100%;                   /* breedte: zo breed als het blok... */
+  max-width: 520px;              /* ...maar maximaal 520 pixels */
+}
+
+/* ---------- TABELLEN ---------- */
+
+table {
+  border-collapse: collapse;     /* de randjes van de cellen vallen samen tot 1 lijn */
+  margin-bottom: 16px;
+}
+th, td {                         /* komma = deze opmaak geldt voor th EN td */
+  border: 1px solid #c9d3e3;     /* rand: 1px, doorgetrokken, lichtgrijs-blauw */
+  padding: 8px 14px;
+  text-align: left;
+}
+th {
+  background-color: #0b2545;     /* kopcellen: donkerblauw... */
+  color: white;                  /* ...met witte tekst */
+}
+td.kleurvak {
+  width: 50px;                   /* breedte van het kleurvakje */
+}
+
+/* ---------- KLEURENLAB EN OEFENEN ---------- */
+
+/* .kiezers label = de tekst naast een kleurkiezer */
+.kiezers label {
+  font-weight: bold;
+  margin-left: 12px;             /* ruimte links, zodat de kiezers niet tegen elkaar plakken */
+}
+
+/* input[type=color] = alleen de inputs die een kleurkiezer zijn (een attribuut-selector) */
+.kiezers input[type=color] {
+  width: 70px;                   /* breedte */
+  height: 50px;                  /* hoogte */
+  vertical-align: middle;        /* netjes in het midden van de regel */
+  cursor: pointer;               /* de muis wordt een handje: je ziet dat je kunt klikken */
+}
+
+/* details = een uitklapblok bij het oefenen */
+details {
+  background-color: #f4f6fa;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+}
+
+/* summary = de vraag die je altijd ziet */
+summary {
+  font-weight: bold;
+  color: #0b2545;
+  cursor: pointer;
+}
 /* ---------- OPGEZOCHT (vragen uit het document) ----------
    1. color = de kleur van de TEKST.
       background-color = de kleur van de ACHTERGROND.

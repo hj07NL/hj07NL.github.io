@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" font-family="Arial, sans-serif">
+  <!--links: zwarte achtergrond voor RGB (licht), rechts: witte achtergrond voor CMY (inkt)-->
+  <rect x="0" y="0" width="260" height="260" fill="#000000"/>
+  <rect x="260" y="0" width="260" height="260" fill="#ffffff"/>
+  <!--RGB: lichtcirkels die bij elkaar OPTELLEN (screen)-->
+  <circle cx="105" cy="100" r="60" fill="#ff0000" style="mix-blend-mode:screen"/>
+  <circle cx="155" cy="100" r="60" fill="#00ff00" style="mix-blend-mode:screen"/>
+  <circle cx="130" cy="145" r="60" fill="#0000ff" style="mix-blend-mode:screen"/>
+  <!--CMY: inktcirkels die licht WEGHALEN (multiply)-->
+  <circle cx="365" cy="100" r="60" fill="#00ffff" style="mix-blend-mode:multiply"/>
+  <circle cx="415" cy="100" r="60" fill="#ff00ff" style="mix-blend-mode:multiply"/>
+  <circle cx="390" cy="145" r="60" fill="#ffff00" style="mix-blend-mode:multiply"/>
+  <text x="130" y="245" text-anchor="middle" font-size="16" fill="#ffffff">RGB (licht)</text>
+  <text x="390" y="245" text-anchor="middle" font-size="16" fill="#0b2545">CMY (inkt)</text>
+</svg>
