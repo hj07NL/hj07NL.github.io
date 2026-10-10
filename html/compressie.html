@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!--dit is de pagina over het binaire stelsel, hij staat in de map html-->
+<!DOCTYPE html> <!--dit is de pagina over compressie, hij staat in de map html-->
 <html> <!--dit is het html-element, hier staat de hele pagina in-->
     <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
         <title>Compressie</title> <!--de titel, die staat op het tabblad-->
@@ -9,7 +9,8 @@
 
         <!--MENU met dropdown: 3 geneste lijsten.
             ../ = eerst 1 map omhoog naar de hoofdmap.
-            Pagina's in dezelfde map (html) hebben geen pad nodig-->
+            Pagina's in dezelfde map (html) hebben geen pad nodig.
+            # = spring naar een stukje van de pagina met dat id-->
         <ul> <!--niveau 1: de donkerblauwe balk-->
             <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
             <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
@@ -30,25 +31,99 @@
                         <ul> <!--niveau 3: de stukjes van de AI-pagina-->
                             <li><a href="ai.html#wat">Wat is AI?</a></li>
                             <li><a href="ai.html#gebruik">Hoe gebruik ik AI?</a></li>
-                            <li><a href="ai.html#iphone">AI in mijn Iphone 15</a></li>
+                            <li><a href="ai.html#iphone">AI in mijn iPhone 15</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
 
+        <!--PAGINAKOP: de blauwe balk met de titel van deze pagina-->
+        <div class="paginakop">
+            <h1>Compressie</h1> <!--h1 = de belangrijkste kop van deze pagina-->
+            <p>Hoe maak je bestanden kleiner?</p>
+        </div>
 
         <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
         <div class="inhoud">
 
-            <p>Uitleg over compressie</p> <!--p = paragraaf-->
+            <!-- ===== BLOK 1: WAAROM COMPRESSIE ===== -->
+            <div class="blok">
+                <h2>Waarom compressie?</h2> <!--h2 = een kopje-->
+                <p>Foto's, muziek en video's zijn grote bestanden. Die nemen veel <b>opslagruimte</b> in,
+                   zijn <b>langzaam</b> om te downloaden en gebruiken je <b>databundel</b> snel op.
+                   Met <b>compressie</b> maak je een bestand kleiner. Je slaat de gegevens op met minder bits dan eerst.</p>
+            </div>
 
-            <p><a href="../index.html">Home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
+            <!-- ===== BLOK 2: LOSSLESS EN LOSSY ===== -->
+            <div class="blok">
+                <h2>Lossless en lossy</h2>
+                <p>Er zijn 2 soorten compressie:</p>
+                <!--TABEL: tr = rij, th = kopcel, td = gewone cel-->
+                <table>
+                    <tr> <th></th>                 <th>Lossless (zonder verlies)</th>        <th>Lossy (met verlies)</th> </tr>
+                    <tr> <th>Wat gebeurt er?</th>  <td>Gegevens worden slimmer opgeslagen</td> <td>Details worden weggegooid</td> </tr>
+                    <tr> <th>Origineel terug?</th> <td>Ja, precies hetzelfde</td>             <td>Nee</td> </tr>
+                    <tr> <th>Hoe klein?</th>       <td>Minder klein</td>                     <td>Heel klein</td> </tr>
+                    <tr> <th>Voorbeelden</th>      <td>ZIP, PNG, GIF, PDF</td>               <td>JPEG, MP3, MP4</td> </tr>
+                </table>
+            </div>
 
-            <!--plaatje: ../ = 1 map omhoog, dan de map images in-->
-            <img src="../images/binair.jpeg" alt="Plaatje over het binaire stelsel">
+            <!-- ===== BLOK 3: BITMAP EN VECTOR ===== -->
+            <div class="blok">
+                <h2>Bitmap en vector</h2>
+                <p>Een <b>bitmap</b> bestaat uit pixels, zoals een foto. Van elke pixel wordt de kleur opgeslagen.
+                   Dat kost veel ruimte, en als je inzoomt zie je blokjes.</p>
+                <p>Een <b>vector</b> slaat geen pixels op, maar vormen: bijvoorbeeld "cirkel, rood, zo groot, op die plek".
+                   Een vector blijft altijd scherp, hoe ver je ook inzoomt. Een foto kan geen vector zijn, want die bestaat niet uit vormen.
+                   Het plaatje op mijn pagina <a href="kleurmodellen.html">Kleurmodellen</a> is een vector (.svg).</p>
+            </div>
 
-        </div> <!--einde van de doos-->
+            <!-- ===== BLOK 4: VIDEO EN SAMENVATTING ===== -->
+            <div class="blok video">
+                <h2>Video: Compression (Crash Course Computer Science)</h2>
 
-    </body>
-</html>
+                <!--VIDEO EMBEDDEN: iframe = een "venster" waarin een andere website wordt getoond, hier de speler van YouTube.
+                    src = de link naar de video. Na /embed/ komt het ID van de video (11 tekens).
+                    title = beschrijving van de video. allowfullscreen = je mag de video op volledig scherm bekijken-->
+                <iframe src="https://www.youtube.com/embed/OtDxDvCpPL4" title="Compression: Crash Course Computer Science #21" allowfullscreen></iframe>
+
+                <h3>Mijn samenvatting</h3> <!--h3 = een kleiner kopje-->
+
+                <p>De video laat zien hoe je bestanden kleiner maakt. Dan kun je meer opslaan en bestanden sneller versturen.
+                   Er zijn 2 soorten compressie: <b>lossless</b> en <b>lossy</b>.</p>
+
+                <p><b>Lossless</b> betekent dat er niets verloren gaat. Het voorbeeld is een plaatje van Pac-Man van 4 × 4 pixels.
+                   Elke pixel kost 3 bytes (voor rood, groen en blauw), dus het plaatje is 48 bytes.
+                   Met <b>run-length encoding</b> schrijf je niet 7 keer "gele pixel", maar 1 keer "7 gele pixels".
+                   Zo wordt het plaatje 24 bytes, de helft kleiner. Een andere manier is een <b>Huffman-boom</b>:
+                   iets dat vaak voorkomt krijgt een korte code, en iets dat weinig voorkomt een langere code.
+                   Dan heb je wel een <b>woordenboek</b> nodig, zodat de computer weet welke code wat betekent.</p>
+
+                <p><b>Lossy</b> betekent dat je informatie weggooit die mensen toch niet merken. Dat heet <b>perceptual coding</b>.
+                   Bij <b>muziek</b> (MP3) haal je geluid weg dat je niet kunt horen. Een MP3 is vaak 10 keer zo klein.
+                   Bij <b>foto's</b> (JPEG) deel je de foto op in blokjes van 8 × 8 pixels en gooi je kleine details weg,
+                   want onze ogen zien kleine kleurverschillen slecht.</p>
+
+                <p>Bij <b>video</b> blijft veel hetzelfde van het ene beeldje naar het volgende, zoals de achtergrond.
+                   Dat heet <b>temporal redundancy</b>. Die pixels hoef je niet steeds opnieuw op te slaan.
+                   Daardoor is een MP4-video 20 tot 200 keer zo klein. Comprimeer je te veel, dan krijg je rare vlekken in beeld.</p>
+
+                <p><b>Wat ik geleerd heb:</b> ik wist niet dat compressie gebruikmaakt van hoe onze ogen en oren werken.
+                   Nu snap ik ook waarom een videogesprek bij slecht internet soms klinkt als een robot:
+                   dan wordt er extra veel informatie weggegooid. Zonder compressie zou YouTube bijna niet kunnen bestaan.</p>
+
+                <h3>Moeilijke woorden uit de video</h3>
+                <table>
+                    <tr> <th>Woord</th>                <th>Betekenis</th> </tr>
+                    <tr> <td>Compressie</td>           <td>Een bestand kleiner maken</td> </tr>
+                    <tr> <td>Lossless</td>             <td>Zonder verlies: je krijgt het origineel precies terug</td> </tr>
+                    <tr> <td>Lossy</td>                <td>Met verlies: er wordt informatie weggegooid</td> </tr>
+                    <tr> <td>Run-length encoding</td>  <td>Herhalingen korter opschrijven: "7 × geel" in plaats van 7 keer geel</td> </tr>
+                    <tr> <td>Huffman-boom</td>         <td>Een manier om codes te maken: wat vaak voorkomt krijgt een korte code</td> </tr>
+                    <tr> <td>Perceptual coding</td>    <td>Weggooien wat mensen toch niet zien of horen (perceptie = waarneming)</td> </tr>
+                    <tr> <td>Temporal redundancy</td>  <td>Bij video: wat tussen beeldjes hetzelfde blijft, hoef je niet opnieuw op te slaan</td> </tr>
+                </table>
+            </div>
+
+            <!-- ===== BLOK 5: OEFENEN ===== -->

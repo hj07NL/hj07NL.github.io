@@ -314,6 +314,17 @@ summary {
 .inhoud a.spelknop:hover {
   background-color: #0b2545;
 }
+
+/* ---------- VIDEO (compressie-pagina) ---------- */
+
+/* .video iframe = het videovenster in het blok met class="video" */
+.video iframe {
+  width: 100%;                   /* breedte: zo breed als het blok... */
+  max-width: 640px;              /* ...maar maximaal 640 pixels */
+  aspect-ratio: 16 / 9;          /* verhouding breedte : hoogte = 16 : 9, net als een YouTube-video */
+  border: none;                  /* geen rand om het venster */
+  border-radius: 8px;            /* afgeronde hoeken */
+}
 /* ---------- OPGEZOCHT (vragen uit het document) ----------
    1. color = de kleur van de TEKST.
       background-color = de kleur van de ACHTERGROND.
