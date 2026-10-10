@@ -7,7 +7,11 @@
     </head>
     <body> <!--de body: alles wat je ZIET op je site-->
 
-         <ul> <!--niveau 1: de donkerblauwe balk-->
+        <!--MENU met dropdown: 3 geneste lijsten.
+            ../ = eerst 1 map omhoog naar de hoofdmap.
+            Pagina's in dezelfde map (html) hebben geen pad nodig.
+            # = spring naar een stukje van de pagina met dat id-->
+        <ul> <!--niveau 1: de donkerblauwe balk-->
             <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
             <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
                 <a href="#">Menu ▾</a> <!--href="#" = deze link gaat nergens heen, hij opent alleen het menu-->
@@ -27,23 +31,83 @@
                         <ul> <!--niveau 3: de stukjes van de AI-pagina-->
                             <li><a href="ai.html#wat">Wat is AI?</a></li>
                             <li><a href="ai.html#gebruik">Hoe gebruik ik AI?</a></li>
-                            <li><a href="ai.html#iphone">AI in mijn Iphone 15</a></li>
+                            <li><a href="ai.html#iphone">AI in mijn iPhone 15</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
 
-
         <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
         <div class="inhoud">
 
-            <p>Uitleg over kleurmodellen</p> <!--p = paragraaf-->
+            <h1>Kleurmodellen</h1> <!--h1 = de belangrijkste kop van deze pagina-->
 
-            <p><a href="../index.html">Home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
+            <!-- ===== PIXELS ===== -->
+            <h2>Wat is een pixel?</h2> <!--h2 = een kopje-->
+            <p>Een digitale afbeelding bestaat uit heel veel kleine vierkantjes: pixels.
+               Het woord pixel komt van <i>picture element</i>. <!--i = schuine letters (italic)-->
+               Als je heel ver inzoomt op een foto, kun je de losse pixels zien.</p>
+
+            <!-- ===== RGB ===== -->
+            <h2>Het RGB-model: kleuren op een scherm</h2>
+            <p>Elke pixel op een beeldscherm bestaat uit 3 lampjes: <b>rood</b>, <b>groen</b> en <b>blauw</b>. <!--b = dikgedrukt (bold)-->
+               Door die lampjes feller of zwakker te laten branden, maak je alle andere kleuren.
+               Het RGB-model begint met een zwarte achtergrond: als alle lampjes uit staan, is het scherm zwart.
+               Alle lampjes vol aan geeft wit.</p>
+
+            <!--TABEL: table = de hele tabel, tr = table row (een rij), th = table header (kopcel), td = table data (gewone cel)-->
+            <table>
+                <tr> <th>Kleur 1</th> <th>Kleur 2</th> <th>Kleur 3</th> <th>Nieuwe kleur</th> </tr>
+                <tr> <td>-</td>       <td>-</td>      <td>-</td>      <td>Zwart</td> </tr>
+                <tr> <td>Rood</td>    <td>Groen</td>  <td>Blauw</td>  <td>Wit</td> </tr>
+                <tr> <td>Rood</td>    <td>Groen</td>  <td>-</td>      <td>Geel</td> </tr>
+                <tr> <td>Rood</td>    <td>Blauw</td>  <td>-</td>      <td>Paars</td> </tr>
+                <tr> <td>Blauw</td>   <td>Groen</td>  <td>-</td>      <td>Turquoise</td> </tr>
+            </table>
+
+            <!-- ===== DECIMAAL EN HEXADECIMAAL ===== -->
+            <h2>Kleuren als getallen: decimaal en hexadecimaal</h2>
+            <p>Een computer kan niet werken met "een beetje rood". Daarom krijgt elk lampje een getal van 0 tot en met 255.
+               Dat komt doordat elke kleur 1 byte gebruikt: 8 bits, en 2<sup>8</sup> = 256 mogelijkheden. <!--sup = superscript, een klein getal omhoog (macht)-->
+               Geel is bijvoorbeeld (255, 255, 0): rood vol aan, groen vol aan, blauw uit.</p>
+
+            <p>Op websites schrijf je kleuren vaak in <b>hexadecimaal</b> (16-tallig).
+               Hexadecimaal heeft 16 cijfers: 0 tot en met 9 en daarna A tot en met F (A = 10, F = 15).
+               Elke kleur krijgt dan 2 tekens. 255 wordt FF, en 0 wordt 00.</p>
+
+            <p>Voorbeeld: de oranje kleur van mijn website is rood = 242.
+               242 ÷ 16 = 15 met een rest van 2. 15 = F, dus 242 = <b>F2</b>.</p>
+
+            <!--KLEURVAKJES: in de eerste cel van elke rij zie je de kleur.
+                style="background-color: ..." = de kleur staat direct in de HTML (inline CSS).
+                Bij de kleuren van mijn site schrijf ik de kleur 1 keer in rgb() (decimaal) en 1 keer met # (hexadecimaal),
+                om te laten zien dat het precies dezelfde kleur is-->
+            <table>
+                <tr> <th>Kleur</th> <th>Naam</th> <th>Decimaal (R, G, B)</th> <th>Hexadecimaal</th> </tr>
+                <tr> <td class="kleurvak" style="background-color: rgb(255, 0, 0);"></td>     <td>Rood</td>  <td>255, 0, 0</td>     <td>#FF0000</td> </tr>
+                <tr> <td class="kleurvak" style="background-color: rgb(0, 255, 0);"></td>     <td>Groen</td> <td>0, 255, 0</td>     <td>#00FF00</td> </tr>
+                <tr> <td class="kleurvak" style="background-color: rgb(0, 0, 255);"></td>     <td>Blauw</td> <td>0, 0, 255</td>     <td>#0000FF</td> </tr>
+                <tr> <td class="kleurvak" style="background-color: rgb(255, 255, 0);"></td>   <td>Geel</td>  <td>255, 255, 0</td>   <td>#FFFF00</td> </tr>
+                <tr> <td class="kleurvak" style="background-color: #F28C28;"></td>            <td>Oranje (mijn site)</td>      <td>242, 140, 40</td> <td>#F28C28</td> </tr>
+                <tr> <td class="kleurvak" style="background-color: rgb(11, 37, 69);"></td>    <td>Donkerblauw (mijn site)</td> <td>11, 37, 69</td>   <td>#0B2545</td> </tr>
+                <tr> <td class="kleurvak" style="background-color: #1D4E89;"></td>            <td>Middenblauw (mijn site)</td> <td>29, 78, 137</td>  <td>#1D4E89</td> </tr>
+            </table>
+
+            <!-- ===== CMYK ===== -->
+            <h2>Het CMYK-model: kleuren op papier</h2>
+            <p>Papier is wit en geeft zelf geen licht. Een printer kan dus geen lampjes gebruiken, maar gebruikt inkt.
+               Daarom is er het CMY-model: <b>c</b>yaan, <b>m</b>agenta en <b>y</b>ellow (geel).
+               Hier begin je met een witte achtergrond en voeg je kleur toe met inkt.</p>
+            <p>Cyaan, magenta en geel samen geven geen mooi zwart, maar donkergrijs. Ook wordt het papier dan heel nat.
+               Daarom heeft een printer ook nog zwarte inkt. Zo ontstaat het CMYK-model: de K staat voor <i>key</i> (zwart).</p>
+            <p>Om van RGB naar CMY te rekenen gebruik je deze formule: CMY = (255 − R, 255 − G, 255 − B).
+               Voorbeeld: oranje is RGB (255, 128, 0). In CMY wordt dat (255 − 255, 255 − 128, 255 − 0) = (0, 127, 255).</p>
 
             <!--plaatje: ../ = 1 map omhoog, dan de map images in-->
             <img src="../images/kleurmodellen.jpeg" alt="Plaatje over kleurmodellen">
+
+            <p><a href="../index.html">Terug naar home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
 
         </div> <!--einde van de doos-->
 

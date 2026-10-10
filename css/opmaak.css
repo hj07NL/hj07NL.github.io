@@ -1,7 +1,17 @@
 /* opmaak.css = de opmaak van mijn hele website.
    Elk .html-bestand linkt naar dit bestand in de <head>.
-   Mijn kleuren: donkerblauw (#0b2545) en oranje (#f28c28). */
 
+   HOE HEB IK KLEUR AAN MIJN WEBSITE TOEGEVOEGD?
+   - Mijn kleuren: donkerblauw (#0b2545), oranje (#f28c28) en middenblauw (#1d4e89).
+   - Een kleur zet ik in de code met een EIGENSCHAP:
+       color: ...;            = de kleur van de TEKST
+       background-color: ...; = de kleur van de ACHTERGROND
+   - Een kleur kun je op 2 manieren opschrijven, het geeft precies dezelfde kleur:
+       hexadecimaal: #f28c28           (# + 2 tekens rood, 2 tekens groen, 2 tekens blauw)
+       decimaal:     rgb(242, 140, 40) (rood, groen, blauw, elk van 0 tot 255)
+   - De meeste kleuren staan hier in opmaak.css, zodat ik ze maar 1 keer hoef te veranderen.
+   - Op de kleurenpagina staat de kleur direct in de HTML met style="background-color: ...".
+     Dat heet inline CSS. Daar laat ik zien dat rgb() en # dezelfde kleur geven. */
 /* body = de hele pagina.
    margin: 0 = geen witte rand om de pagina, zodat de menubalk tegen de rand zit */
 body {
