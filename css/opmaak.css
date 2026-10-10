@@ -3,8 +3,7 @@
    Mijn kleuren: donkerblauw (#0b2545) en oranje (#f28c28). */
 
 /* body = de hele pagina.
-   margin: 0 = geen witte rand om de pagina, zodat de menubalk tegen de rand zit
-   font-family = het lettertype. Arial is makkelijk te lezen. sans-serif = reserve als Arial er niet is */
+   margin: 0 = geen witte rand om de pagina, zodat de menubalk tegen de rand zit */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -104,7 +103,6 @@ li:hover > ul {
   width: 300px;                /* 300 pixels breed */
 }
 
-
 /* ---------- HONINGRAAT (homepage, mijn ontwerp) ---------- */
 
 /* .honingraat = de hele doos met zeshoeken */
@@ -177,7 +175,6 @@ a.onderwerp:hover {
 a.hobby:hover {
   background-color: #f28c28;   /* blauw wordt oranje */
 }
-
 /* ---------- OPGEZOCHT (vragen uit het document) ----------
    1. color = de kleur van de TEKST.
       background-color = de kleur van de ACHTERGROND.
