@@ -207,8 +207,12 @@ a.hobby:hover {
 /* FOTO'S met een gekleurd laagje eroverheen.
    linear-gradient(kleur, kleur) = een laagje van 1 kleur. Die ligt BOVENOP de foto (wat eerst staat, ligt bovenop).
    rgba(242, 140, 40, 0.6) = oranje, 60% ondoorzichtig. rgba(29, 78, 137, 0.6) = middenblauw, 60% ondoorzichtig */
-.tegel-ai      { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ai.jpg"); }
-.tegel-iphone  { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/iphone15.jpg"); }
+/* AI-tegel: de foto is ingezoomd, zodat de chip met "AI" groot in het midden staat */
+.tegel-ai {
+  background-image: linear-gradient(rgba(242, 140, 40, 0.35), rgba(242, 140, 40, 0.35)), url("../images/ai.jpg");
+  background-size: 250%;          /* de foto 2,5 keer zo groot maken: inzoomen op de chip */
+  background-position: 52% 10%;   /* welk stuk van de foto je ziet: 52% van links, 10% van boven. Zo staat de chip in het midden */
+}.tegel-iphone  { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/iphone15.jpg"); }
 .tegel-natuur  { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/natuur.jpg"); }
 .tegel-hockey  { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/hockey.jpg"); }
 .tegel-afkomst { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/afkomst.jpg"); }
