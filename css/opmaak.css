@@ -211,7 +211,7 @@ a.hobby:hover {
 /* Kleurmodellen-tegel: de hele afbeelding met cirkels, in het midden, met echte kleuren */
 .kleur {
   background-image: linear-gradient(rgba(242, 140, 40, 0.2), rgba(242, 140, 40, 0.2)), url("../images/kleur.jpg");
-  background-size: contain, 100%;             /* de foto past precies in de breedte, er wordt niets afgeknipt */
+  background-size: contain, 200%;             /* de foto past precies in de breedte, er wordt niets afgeknipt */
   background-repeat: no-repeat;               /* niet herhalen */
   background-position: center, center;        /* precies in het midden */
 }
