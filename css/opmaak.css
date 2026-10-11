@@ -1,334 +1,319 @@
-/* opmaak.css = de opmaak van mijn hele website.
-   Elk .html-bestand linkt naar dit bestand in de <head>.
+/* dit is de opmaak van mijn hele website. Alle pagina's linken naar dit bestand.
 
-   HOE HEB IK KLEUR AAN MIJN WEBSITE TOEGEVOEGD?
-   - Mijn kleuren: donkerblauw (#0b2545), oranje (#f28c28) en middenblauw (#1d4e89).
-   - Een kleur zet ik in de code met een EIGENSCHAP:
-       color: ...;            = de kleur van de TEKST
-       background-color: ...; = de kleur van de ACHTERGROND
-   - Een kleur kun je op 2 manieren opschrijven, het geeft precies dezelfde kleur:
-       hexadecimaal: #f28c28           (# + 2 tekens rood, 2 tekens groen, 2 tekens blauw)
-       decimaal:     rgb(242, 140, 40) (rood, groen, blauw, elk van 0 tot 255)
-   - De meeste kleuren staan hier in opmaak.css, zodat ik ze maar 1 keer hoef te veranderen.
-   - Op de kleurenpagina staat de kleur direct in de HTML met style="background-color: ...".
-     Dat heet inline CSS. Daar laat ik zien dat rgb() en # dezelfde kleur geven. */
-/* body = de hele pagina.
-   margin: 0 = geen witte rand om de pagina, zodat de menubalk tegen de rand zit */
+   Hoe ik kleur heb toegevoegd:
+   Mijn kleuren zijn donkerblauw (#0b2545), oranje (#f28c28) en middenblauw (#1d4e89).
+   Met color geef ik de tekst een kleur en met background-color de achtergrond.
+   Ik schrijf de kleuren meestal in hexadecimaal, bijvoorbeeld #f28c28.
+   Dat is hetzelfde als rgb(242, 140, 40) in decimaal: rood 242, groen 140 en blauw 40.
+   Bijna alle kleuren staan in dit bestand. Alleen in de kleurentabel op de kleurenpagina
+   staat de kleur in de HTML zelf, met style="background-color: ...". */
+
+
+/* de hele pagina */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-
+  margin: 0;                       /* haalt de witte rand om de pagina weg, zo zit het menu tegen de bovenkant */
+  font-family: Arial, sans-serif;  /* lettertype zonder krulletjes, dat leest makkelijker */
+  background-color: #f4f6fa;       /* lichtgrijze achtergrond, zo vallen de witte blokken op */
 }
+
+
 /* ---------- MENU ---------- */
+/* code van w3schools, de kleuren heb ik zelf veranderd */
 
-/* Code van w3schools (horizontaal menu).
-   ul = de hele lijst van het menu */
+/* alle lijsten (ul): bolletjes, marge en padding weg */
 ul {
-  list-style-type: none;       /* geen bolletjes */
-  margin: 0;                   /* geen ruimte BUITEN de lijst */
-  padding: 0;                  /* geen ruimte BINNEN de lijst */
+  list-style-type: none;           /* geen bolletjes voor de menu-items */
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: #0b2545;   /* EXPERIMENT: was #333 (grijs), ik koos donkerblauw */
+  background-color: #0b2545;       /* het menu wordt donkerblauw (bij w3schools was het #333, grijs) */
 }
 
-/* li = 1 item van het menu.
-   float: left = alle items gaan NAAST elkaar staan in plaats van onder elkaar */
+/* alle menu-items (li) komen naast elkaar te staan */
 li {
   float: left;
 }
 
-/* li a = de links IN het menu */
+/* de links in het menu */
 li a {
-  display: block;              /* het hele vakje is klikbaar, niet alleen de tekst */
-  color: white;                /* kleur van de tekst */
-  text-align: center;          /* tekst in het midden */
-  padding: 14px 16px;          /* ruimte binnen het vakje: 14px boven en onder, 16px links en rechts */
-  text-decoration: none;       /* geen streep onder de link */
+  display: block;                  /* je kunt op het hele vakje klikken en niet alleen op de tekst */
+  color: white;                    /* de tekst in het menu wordt wit */
+  text-align: center;
+  padding: 14px 16px;              /* ruimte rond de tekst: 14px boven en onder, 16px links en rechts */
+  text-decoration: none;           /* geen streep onder de links */
 }
 
-/* li a:hover = de link als je muis erop staat.
-   EXPERIMENT: was #111 (zwart), ik koos oranje */
+/* een link in het menu wordt oranje als je muis erop staat (bij w3schools was dit #111, zwart) */
 li a:hover {
   background-color: #f28c28;
 }
 
+
 /* ---------- DROPDOWN ---------- */
 
-/* li.rechts = het menu-item met class="rechts" (Menu ▾).
-   float: right = dit item staat RECHTS in de balk */
+/* de li met class="rechts" (Menu ▾) staat rechts in de balk */
 li.rechts {
   float: right;
 }
 
-/* li ul = een lijst BINNEN een lijst-item (niveau 2 en 3).
-   Die is eerst ONZICHTBAAR. */
+/* een lijst in een lijst is eerst onzichtbaar */
 li ul {
-  display: none;               /* none = niet zichtbaar */
-  position: absolute;          /* zweeft OVER de pagina heen, de rest schuift niet op */
-  right: 0;                    /* tegen de rechterkant van het scherm */
-  min-width: 180px;            /* minstens 180 pixels breed */
-  overflow: visible;           /* anders wordt niveau 3 afgeknipt */
-  z-index: 1;                  /* ligt BOVENOP de rest van de pagina */
+  display: none;                   /* je ziet hem niet */
+  position: absolute;              /* hij komt over de pagina heen, de rest schuift niet naar beneden */
+  right: 0;                        /* tegen de rechterkant van het scherm */
+  min-width: 180px;                /* het menu is minstens 180 pixels breed */
+  overflow: visible;               /* anders wordt het 3e niveau afgeknipt */
+  z-index: 1;                      /* het menu ligt bovenop de rest */
 }
 
-/* in de dropdown staan de items ONDER elkaar, niet naast elkaar */
+/* de items in de dropdown staan onder elkaar */
 li ul li {
-  float: none;                 /* niet meer naast elkaar */
-  position: relative;          /* nodig zodat niveau 3 naast dit item komt */
+  float: none;
+  position: relative;              /* nodig zodat het 3e niveau naast dit item komt */
 }
 
-/* tekst in de dropdown links uitlijnen */
+/* de tekst in de dropdown staat links */
 li ul a {
   text-align: left;
 }
 
-/* li ul ul = niveau 3 (een lijst in een lijst in een lijst).
-   Die komt LINKS naast het item in plaats van eronder */
+/* het 3e niveau (een lijst in een lijst in een lijst) komt links naast het menu */
 li ul ul {
-  top: 0;                      /* op dezelfde hoogte als het item */
-  right: 100%;                 /* helemaal links naast het item */
+  top: 0;
+  right: 100%;
 }
 
-/* li:hover > ul = als je muis op een li staat, wordt de lijst DIRECT daarin zichtbaar.
-   > = alleen de lijst direct erin, niet de lijsten nog dieper */
+/* als je muis op een menu-item staat, wordt de lijst daarin zichtbaar */
 li:hover > ul {
-  display: block;              /* block = wel zichtbaar */
+  display: block;
 }
 
-/* ---------- INHOUD ---------- */
 
-/* .inhoud = de doos met class="inhoud" (de punt betekent: class) */
+/* ---------- HONINGRAAT (homepage) ---------- */
+
+/* de doos met alle zeshoeken staat in het midden van de pagina */
+.honingraat {
+  width: 660px;                    /* breedte van 4 zeshoeken plus een halve */
+  margin: 40px auto;               /* 40px ruimte boven en onder, door auto staat hij in het midden */
+}
+
+/* een rij zeshoeken */
+.rij {
+  overflow: hidden;                /* de rij wordt net zo hoog als de zeshoeken erin */
+}
+
+/* de middelste rij schuift een halve zeshoek op */
+.rij.verschoven {
+  position: relative;
+  left: 73px;                      /* 73px naar rechts */
+  margin-top: -36px;               /* omhoog, zodat de rijen in elkaar passen */
+  margin-bottom: -36px;            /* de rij eronder schuift ook omhoog */
+}
+
+/* alle zeshoeken */
+.zeshoek {
+  float: left;                     /* de zeshoeken staan naast elkaar */
+  width: 140px;                    /* breedte van een zeshoek */
+  height: 162px;                   /* hoogte van een zeshoek */
+  margin-right: 6px;               /* een beetje ruimte ertussen */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* knipt een zeshoek uit het vierkant, dit zijn de 6 punten */
+  display: flex;                   /* deze regel en de 2 regels hieronder zetten de tekst in het midden */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 18px;                 /* de tekst komt niet tegen de schuine randen aan */
+  box-sizing: border-box;          /* de padding hoort bij de 140px en maakt de zeshoek niet breder */
+  color: white;                    /* de tekst in de zeshoeken is wit */
+  font-weight: bold;               /* dikgedrukt */
+  text-decoration: none;           /* geen streep onder de tekst */
+  background-size: cover;          /* de foto vult de hele zeshoek */
+  background-position: center;     /* het midden van de foto staat in het midden van de zeshoek */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* een schaduwtje achter de tekst, dan kun je hem beter lezen op een foto */
+}
+
+/* de zeshoeken over informatica zijn oranje */
+.onderwerp {
+  background-color: #f28c28;
+}
+
+/* de zeshoeken over mij zijn middenblauw */
+.hobby {
+  background-color: #1d4e89;
+}
+
+/* de middelste zeshoek met mijn naam is donkerblauw */
+.midden {
+  background-color: #0b2545;
+}
+
+/* mijn naam in de middelste zeshoek */
+.midden h1 {
+  font-size: 24px;                 /* grootte van de letters */
+  margin: 0;
+}
+
+/* een zeshoek wordt iets lichter als je muis erop staat */
+a.zeshoek:hover {
+  filter: brightness(1.2);
+}
+
+
+/* ---------- FOTO'S IN DE ZESHOEKEN ---------- */
+/* ../images/ betekent: vanuit de map css 1 map omhoog en dan de map images in.
+   Over elke foto ligt een gekleurd laagje (linear-gradient), dan past de foto bij de kleur van de zeshoek.
+   Het laatste getal (0.6) zorgt dat het laagje een beetje doorzichtig is, zo zie je de foto er nog doorheen */
+
+/* oranje laagje */
+.binair     { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/binair.jpg"); }
+.ai-gebruik { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ai-gebruik.jpg"); }
+.compressie { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/compressie.jpg"); }
+.iphone     { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/iphone15.jpg"); }
+
+/* blauw laagje */
+.natuur     { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/natuur.jpg"); }
+.hockey     { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/hockey.jpg"); }
+.afkomst    { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/afkomst.jpg"); }
+.familie    { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/familie.jpg"); }
+
+/* bij IVU staat de hele afbeelding bovenin en de tekst eronder */
+.ivu {
+  background-image: linear-gradient(rgba(242, 140, 40, 0.35), rgba(242, 140, 40, 0.35)), url("../images/ivu.jpg");
+  background-size: contain, 92%;            /* de afbeelding is 92% van de breedte, zo past hij er helemaal in */
+  background-repeat: no-repeat;             /* de afbeelding komt er maar 1 keer in */
+  background-position: center, center 28%;  /* de afbeelding staat in het midden, een stukje van boven */
+  padding-top: 70px;                        /* de tekst schuift naar beneden, onder de afbeelding */
+}
+
+/* bij AI zoom ik in op de chip, zodat die groot in het midden staat */
+.ai {
+  background-image: linear-gradient(rgba(242, 140, 40, 0.35), rgba(242, 140, 40, 0.35)), url("../images/ai.jpg");
+  background-size: 250%;                    /* de foto 2,5 keer zo groot = inzoomen */
+  background-position: 52% 10%;             /* welk stuk van de foto je ziet: daar staat de chip */
+}
+
+/* bij kleurmodellen staan de getekende cirkels, zonder laagje zodat je de echte kleuren ziet */
+.kleur {
+  background-image: url("../images/kleur-cirkels.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* ---------- PAGINA'S MET UITLEG ---------- */
+
+/* de blauwe balk met de titel bovenaan elke pagina */
+.paginakop {
+  background-color: #1d4e89;       /* middenblauwe achtergrond */
+  color: white;                    /* witte tekst */
+  padding: 40px 20px;              /* ruimte boven en onder de titel */
+  text-align: center;              /* titel in het midden */
+}
+.paginakop h1 {
+  margin: 0;
+  font-size: 40px;                 /* grote letters voor de titel */
+}
+.paginakop p {
+  margin: 8px 0 0 0;               /* een klein beetje ruimte boven de zin onder de titel */
+  font-size: 18px;
+}
+
+/* alle tekst van een pagina */
 .inhoud {
-  color: #0b2545;              /* donkerblauwe tekst */
-  padding: 16px;               /* ruimte binnen de doos, zodat de tekst niet tegen de rand zit */
+  color: #0b2545;                  /* de tekst is donkerblauw */
+  padding: 16px;
+  max-width: 900px;                /* niet breder dan 900px, anders worden de regels te lang om te lezen */
+  margin: 0 auto;                  /* in het midden van het scherm */
+  line-height: 1.6;                /* meer ruimte tussen de regels */
 }
 
-/* EXPERIMENT: de links in de tekst een andere kleur geven (oranje) */
+/* links in de tekst zijn oranje */
 .inhoud a {
   color: #f28c28;
 }
 
-/* de plaatjes in de doos niet te groot maken */
-.inhoud img {
-  width: 300px;                /* 300 pixels breed */
-}
-
-/* ---------- HONINGRAAT (homepage, mijn ontwerp) ---------- */
-
-/* .honingraat = de hele doos met zeshoeken */
-.honingraat {
-  width: 660px;                /* breedte: 4 zeshoeken + een halve voor de verschoven rij */
-  margin: 40px auto;           /* 40px ruimte boven en onder. auto links en rechts = in het MIDDEN van de pagina */
-}
-
-/* .rij = 1 rij zeshoeken.
-   overflow: hidden zorgt dat de rij net zo hoog wordt als de zeshoeken erin (door float) */
-.rij {
-  overflow: hidden;
-}
-
-/* .rij.verschoven = een rij met BEIDE classes: rij en verschoven (de middelste rij).
-   POSITIONEREN: position: relative + left = schuif het element vanaf zijn eigen plek */
-.rij.verschoven {
-  position: relative;          /* ik ga deze rij verschuiven vanaf zijn eigen plek */
-  left: 73px;                  /* 73px naar rechts = een halve zeshoek */
-  margin-top: -36px;           /* een min-getal = naar boven, zodat de rijen in elkaar schuiven */
-  margin-bottom: -36px;        /* de rij eronder schuift ook omhoog */
-}
-
-/* .zeshoek = alles met class="zeshoek": de vorm en de tekst */
-.zeshoek {
-  float: left;                 /* POSITIONEREN: float: left = de zeshoeken staan NAAST elkaar */
-  width: 140px;                /* breedte van een zeshoek */
-  height: 162px;               /* hoogte: een zeshoek is iets hoger dan breed */
-  margin-right: 6px;           /* 6px ruimte tussen de zeshoeken */
-
-  /* clip-path knipt een vorm uit een vierkant blok, net als een koekjesvorm.
-     De 6 getallenparen zijn de 6 hoekpunten van de zeshoek (links-rechts boven-onder in procenten) */
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-
-  /* display: flex + align-items + justify-content = de tekst precies in het MIDDEN */
-  display: flex;
-  align-items: center;         /* midden van boven naar beneden */
-  justify-content: center;     /* midden van links naar rechts */
-  text-align: center;          /* als de tekst op 2 regels staat, ook in het midden */
-
-  padding: 0 18px;             /* 0 boven en onder, 18px links en rechts, zodat tekst niet tegen de schuine rand komt */
-  box-sizing: border-box;      /* de padding telt mee in de 140px breedte */
-  color: white;                /* witte tekst */
-  font-weight: bold;           /* dikgedrukt */
-  text-decoration: none;       /* geen streep onder de link */
-}
-
-/* de KLEUREN van de zeshoeken (het 2e naamkaartje) */
-.onderwerp {
-  background-color: #f28c28;   /* oranje: de informatica-onderwerpen */
-}
-.hobby {
-  background-color: #1d4e89;   /* middenblauw: over mij */
-}
-.midden {
-  background-color: #0b2545;   /* donkerblauw: de middelste zeshoek met mijn naam */
-}
-
-/* .midden h1 = de h1 IN de middelste zeshoek */
-.midden h1 {
-  font-size: 24px;             /* grootte van de letters */
-  margin: 0;                   /* geen extra ruimte om de kop heen */
-}
-
-/* HOVER: de kleur wisselt als je muis op een zeshoek staat.
-   a.onderwerp = alleen een LINK (a) met class="onderwerp" */
-a.onderwerp:hover {
-  background-color: #0b2545;   /* oranje wordt donkerblauw */
-}
-a.hobby:hover {
-  background-color: #f28c28;   /* blauw wordt oranje */
-}
-
-/* ---------- AFBEELDINGEN IN DE ZESHOEKEN ---------- */
-
-/* elke zeshoek: de achtergrondafbeelding vult de hele zeshoek */
-.zeshoek {
-  background-size: cover;                       /* cover = de afbeelding vult de hele zeshoek, zonder lege randen */
-  background-position: center;                  /* het midden van de afbeelding staat in het midden van de zeshoek */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);    /* een zacht schaduwtje achter de tekst, zodat hij beter leesbaar is */
-}
-
-/* TEKENINGEN (svg): wit en half doorzichtig, de kleur van de zeshoek schijnt erdoorheen.
-   url("...") = waar de afbeelding staat. ../ = vanuit de map css eerst 1 map omhoog, dan de map images in */
-/* FOTO'S met een oranje laagje (onderwerpen) */
-/* IVU-tegel: de HELE afbeelding bovenin, de tekst eronder */
-.ivu {
-  background-image: linear-gradient(rgba(242, 140, 40, 0.35), rgba(242, 140, 40, 0.35)), url("../images/ivu.jpg");
-  background-size: contain, 92%;              /* 2 lagen, 2 waardes: het laagje vult alles, de foto is 92% van de breedte */
-  background-repeat: no-repeat;               /* de foto niet herhalen */
-  background-position: center, center 28%;    /* de foto staat in het midden, 28% van boven */
-  padding-top: 70px;                          /* de tekst 70px naar beneden schuiven, onder de foto */
-}.binair     { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/binair.jpg"); }
-.ai-gebruik { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ai-gebruik.jpg"); }
-.compressie { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/compressie.jpg"); }
-/* Kleurmodellen-tegel: de hele afbeelding met cirkels, in het midden, met echte kleuren */
-/* Kleurmodellen-tegel: zelfgetekende CMY-cirkels (svg), precies in het midden.
-   Geen gekleurd laagje eroverheen, zodat je de echte inktkleuren ziet */
-.kleur {
-  background-image: url("../images/kleur-cirkels.svg");
-  background-size: cover;          /* de tekening vult de hele zeshoek */
-  background-position: center;     /* precies in het midden */
-}
-.familie    { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/familie.jpg"); }
-
-/* FOTO'S met een gekleurd laagje eroverheen.
-   linear-gradient(kleur, kleur) = een laagje van 1 kleur. Die ligt BOVENOP de foto (wat eerst staat, ligt bovenop).
-   rgba(242, 140, 40, 0.6) = oranje, 60% ondoorzichtig. rgba(29, 78, 137, 0.6) = middenblauw, 60% ondoorzichtig */
-/* AI-tegel: de foto is ingezoomd, zodat de chip met "AI" groot in het midden staat */
-.ai {
-  background-image: linear-gradient(rgba(242, 140, 40, 0.35), rgba(242, 140, 40, 0.35)), url("../images/ai.jpg");
-  background-size: 250%;          /* de foto 2,5 keer zo groot maken: inzoomen op de chip */
-  background-position: 52% 10%;   /* welk stuk van de foto je ziet: 52% van links, 10% van boven. Zo staat de chip in het midden */
-}.iphone  { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/iphone15.jpg"); }
-.natuur  { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/natuur.jpg"); }
-.hockey  { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/hockey.jpg"); }
-.afkomst { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/afkomst.jpg"); }
-
-/* muis op een zeshoek: hij wordt iets lichter. filter: brightness(1.2) = 20% feller */
-a.zeshoek:hover {
-  filter: brightness(1.2);
-}
-/* ---------- PAGINA'S MET UITLEG (bijvoorbeeld kleurmodellen) ---------- */
-
-/* lichtgrijze achtergrond voor de hele site, zodat de witte blokken opvallen.
-   Je mag dezelfde selector (body) vaker gebruiken: de browser voegt de regels samen */
-body {
-  background-color: #f4f6fa;     /* achtergrondkleur: heel lichtgrijs-blauw */
-}
-
-/* .paginakop = de blauwe balk met de titel bovenaan een pagina */
-.paginakop {
-  background-color: #1d4e89;     /* achtergrondkleur: middenblauw */
-  color: white;                  /* tekstkleur: wit */
-  padding: 40px 20px;            /* 40px boven en onder, 20px links en rechts */
-  text-align: center;            /* tekst in het midden */
-}
-.paginakop h1 {
-  margin: 0;                     /* geen extra ruimte om de titel */
-  font-size: 40px;               /* lettergrootte */
-}
-.paginakop p {
-  margin: 8px 0 0 0;             /* 4 waardes: boven, rechts, onder, links */
-  font-size: 18px;
-}
-
-/* .inhoud = de doos met alle tekst: maximaal 900px breed en in het midden.
-   Deze regels komen bij de .inhoud-regels die er al stonden */
-.inhoud {
-  max-width: 900px;              /* breedte: maximaal 900 pixels, dan zijn de regels niet te lang */
-  margin: 0 auto;                /* auto links en rechts = in het midden */
-  line-height: 1.6;              /* hoogte van een regel: 1,6 keer de lettergrootte, leest prettiger */
-}
-
-/* .blok = een wit blok voor 1 onderwerp */
+/* een wit blok voor elk onderwerp */
 .blok {
   background-color: white;
-  border-left: 6px solid #f28c28;   /* oranje streep links: 6px dik, doorgetrokken lijn */
-  border-radius: 10px;              /* afgeronde hoeken */
-  padding: 8px 24px 16px 24px;      /* ruimte binnen het blok: boven, rechts, onder, links */
-  margin: 24px 0;                   /* 24px ruimte boven en onder */
-  box-shadow: 0 2px 6px rgba(11, 37, 69, 0.15); /* zachte schaduw. rgba = rgb + doorzichtigheid (0.15 = 15%) */
-}
-.blok h2 {
-  color: #0b2545;                /* tekstkleur van de kopjes: donkerblauw */
+  border-left: 6px solid #f28c28;  /* oranje streep aan de linkerkant */
+  border-radius: 10px;             /* ronde hoeken */
+  padding: 8px 24px 16px 24px;     /* ruimte binnen het blok: boven, rechts, onder, links */
+  margin: 24px 0;                  /* ruimte tussen de blokken */
+  box-shadow: 0 2px 6px rgba(11, 37, 69, 0.15); /* een zachte schaduw onder het blok */
 }
 
-/* .uitleg = een licht-oranje vakje voor een rekenvoorbeeld */
+/* de kopjes in de blokken zijn donkerblauw */
+.blok h2 {
+  color: #0b2545;
+}
+
+/* licht-oranje vakje voor voorbeelden en uitleg */
 .uitleg {
-  background-color: #fdf0e3;     /* heel licht oranje */
+  background-color: #fdf0e3;
   border-radius: 8px;
   padding: 10px 16px;
 }
 
-/* img.groot = een plaatje met class="groot" */
+/* het grote plaatje op de kleurenpagina past altijd in het blok */
 .inhoud img.groot {
-  width: 100%;                   /* breedte: zo breed als het blok... */
-  max-width: 520px;              /* ...maar maximaal 520 pixels */
+  width: 100%;
+  max-width: 520px;                /* maar het wordt niet breder dan 520px */
 }
+
+/* de lijst met bronnen moet er normaal uitzien en niet als het menu */
+ul.bronnen {
+  list-style-type: disc;           /* wel bolletjes */
+  background-color: transparent;   /* geen donkerblauwe achtergrond */
+  padding-left: 20px;
+}
+ul.bronnen li {
+  float: none;                     /* onder elkaar */
+}
+
 
 /* ---------- TABELLEN ---------- */
 
+/* de randjes van de vakjes worden 1 lijn in plaats van 2 */
 table {
-  border-collapse: collapse;     /* de randjes van de cellen vallen samen tot 1 lijn */
+  border-collapse: collapse;
   margin-bottom: 16px;
 }
-th, td {                         /* komma = deze opmaak geldt voor th EN td */
-  border: 1px solid #c9d3e3;     /* rand: 1px, doorgetrokken, lichtgrijs-blauw */
+
+/* alle vakjes in een tabel (th en td) krijgen een randje en ruimte */
+th, td {
+  border: 1px solid #c9d3e3;
   padding: 8px 14px;
   text-align: left;
 }
+
+/* de bovenste vakjes zijn donkerblauw met witte tekst */
 th {
-  background-color: #0b2545;     /* kopcellen: donkerblauw... */
-  color: white;                  /* ...met witte tekst */
+  background-color: #0b2545;
+  color: white;
 }
+
+/* het vakje met de kleur in de kleurentabel */
 td.kleurvak {
-  width: 50px;                   /* breedte van het kleurvakje */
+  width: 50px;
 }
 
-/* ---------- KLEURENLAB EN OEFENEN ---------- */
 
-/* .kiezers label = de tekst naast een kleurkiezer */
+/* ---------- KLEURENLAB EN OEFENVRAGEN ---------- */
+
+/* de tekst naast de kleurkiezers */
 .kiezers label {
   font-weight: bold;
-  margin-left: 12px;             /* ruimte links, zodat de kiezers niet tegen elkaar plakken */
+  margin-left: 12px;
 }
 
-/* input[type=color] = alleen de inputs die een kleurkiezer zijn (een attribuut-selector) */
+/* de kleurkiezers zelf */
 .kiezers input[type=color] {
-  width: 70px;                   /* breedte */
-  height: 50px;                  /* hoogte */
-  vertical-align: middle;        /* netjes in het midden van de regel */
-  cursor: pointer;               /* de muis wordt een handje: je ziet dat je kunt klikken */
+  width: 70px;
+  height: 50px;
+  vertical-align: middle;
+  cursor: pointer;                 /* je muis wordt een handje, dan zie je dat je kunt klikken */
 }
 
-/* details = een uitklapblok bij het oefenen */
+/* de oefenvragen die openklappen */
 details {
   background-color: #f4f6fa;
   border-radius: 8px;
@@ -336,91 +321,92 @@ details {
   margin-bottom: 8px;
 }
 
-/* summary = de vraag die je altijd ziet */
+/* de vraag die je altijd ziet */
 summary {
   font-weight: bold;
   color: #0b2545;
   cursor: pointer;
 }
 
-/* ---------- KNOP-LINK (binair-pagina) ---------- */
 
-/* .inhoud a.spelknop = een link met class="spelknop" in de inhoud.
-   Een link is een inline-element. Met display: inline-block kun je hem ook padding en afgeronde hoeken geven,
-   zodat hij eruitziet als een knop */
+/* ---------- KNOP (binair-pagina) ---------- */
+
+/* de link naar Binary Bonanza ziet eruit als een oranje knop */
 .inhoud a.spelknop {
-  display: inline-block;         /* inline-block = blijft op de regel staan, maar gedraagt zich als een blokje */
-  background-color: #f28c28;     /* achtergrondkleur: oranje */
-  color: white;                  /* tekstkleur: wit */
-  font-weight: bold;             /* dikgedrukt */
-  font-size: 18px;               /* lettergrootte */
-  padding: 12px 24px;            /* ruimte binnen de knop: 12px boven en onder, 24px links en rechts */
-  border-radius: 25px;           /* hele ronde hoeken: een "pil"-vorm */
-  text-decoration: none;         /* geen streep onder de link */
+  display: inline-block;           /* hierdoor werken padding en ronde hoeken goed op een link */
+  background-color: #f28c28;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 25px;             /* heel ronde hoeken */
+  text-decoration: none;
 }
 
-/* als de muis op de knop staat: donkerblauw */
+/* de knop wordt donkerblauw als je muis erop staat */
 .inhoud a.spelknop:hover {
   background-color: #0b2545;
 }
 
+
 /* ---------- VIDEO (compressie-pagina) ---------- */
 
-/* .video iframe = het videovenster in het blok met class="video" */
+/* de video past in het blok en is niet breder dan 640px */
 .video iframe {
-  width: 100%;                   /* breedte: zo breed als het blok... */
-  max-width: 640px;              /* ...maar maximaal 640 pixels */
-  aspect-ratio: 16 / 9;          /* verhouding breedte : hoogte = 16 : 9, net als een YouTube-video */
-  border: none;                  /* geen rand om het venster */
-  border-radius: 8px;            /* afgeronde hoeken */
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;            /* de hoogte gaat vanzelf goed, net als bij YouTube */
+  border: none;
+  border-radius: 8px;
 }
 
-/* ---------- SCHEMA (IVU-pagina) ---------- */
 
-/* .schema = de doos met de 3 blokken en de pijlen.
-   overflow: hidden = de doos wordt zo hoog als de blokken erin (door float) */
+/* ---------- SCHEMA (IVU- en AI-pagina) ---------- */
+
+/* de doos met de 3 blokken en de 2 pijlen */
 .schema {
-  overflow: hidden;
-  margin-bottom: 16px;           /* ruimte onder het schema */
+  overflow: hidden;                /* de doos wordt zo hoog als de blokken erin */
+  margin-bottom: 16px;
 }
 
-/* .schema .stap = een blok IN het schema (Invoer, Verwerking, Uitvoer) */
+/* de 3 blauwe blokken in het schema staan naast elkaar */
 .schema .stap {
-  float: left;                   /* POSITIONEREN: de blokken staan naast elkaar */
-  width: 26%;                    /* breedte: 26% van het schema. 3 blokken = 78% */
-  min-height: 128px;             /* minimale hoogte, zodat alle 3 de blokken even hoog zijn */
-  background-color: #1d4e89;     /* achtergrondkleur: middenblauw */
-  color: white;                  /* tekstkleur: wit */
-  text-align: center;            /* tekst in het midden */
-  border-radius: 10px;           /* afgeronde hoeken */
-  padding: 4px 8px;              /* ruimte binnen het blok */
-  box-sizing: border-box;        /* de padding telt mee in de breedte */
+  float: left;
+  width: 26%;                      /* 3 blokken van 26% */
+  min-height: 128px;               /* alle blokken minstens even hoog */
+  background-color: #1d4e89;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 4px 8px;
+  box-sizing: border-box;
 }
 
-/* het kopje in een blok: oranje */
+/* de kopjes in het schema zijn oranje */
 .schema .stap h3 {
-  margin: 8px 0 4px 0;           /* ruimte: boven, rechts, onder, links */
-  color: #f28c28;                /* tekstkleur: oranje */
+  margin: 8px 0 4px 0;
+  color: #f28c28;
 }
 
-/* .schema .pijl = een pijl tussen de blokken */
+/* de pijlen tussen de blokken */
 .schema .pijl {
-  float: left;                   /* naast de blokken */
-  width: 11%;                    /* 2 pijlen = 22%. Samen met de blokken: 78% + 22% = 100% */
-  text-align: center;            /* pijl in het midden */
-  font-size: 40px;               /* grote pijl */
-  color: #f28c28;                /* oranje */
-  padding-top: 30px;             /* ruimte boven de pijl, zodat hij in het midden van de hoogte staat */
+  float: left;
+  width: 11%;                      /* 2 pijlen van 11%, samen met de blokken is dat 100% */
+  text-align: center;
+  font-size: 40px;
+  color: #f28c28;
+  padding-top: 30px;               /* zo staat de pijl ongeveer in het midden */
 }
+
+
 /* ---------- OPGEZOCHT (vragen uit het document) ----------
-   1. color = de kleur van de TEKST.
-      background-color = de kleur van de ACHTERGROND.
-   2. display: block = het element wordt een block (een plank):
-      het neemt de hele breedte en het hele vlak is klikbaar.
-   3. li a:hover = de opmaak van een link in een lijst-item
-      op het moment dat de muis erop staat (hover = zweven).
-   4. padding: 8px 16px
-      a. padding = de ruimte BINNEN een element, tussen de rand en de inhoud.
-      b. px = pixels, de kleine puntjes waaruit je scherm bestaat.
-      c. 2 waardes: de 1e is voor boven en onder,
-         de 2e is voor links en rechts. */
+   1. Wat is het verschil tussen color en background-color?
+      color is de kleur van de tekst, background-color is de kleur van de achtergrond.
+   2. Wat betekent display: block?
+      Het element wordt een blok: het neemt de hele breedte in en je kunt op het hele vlak klikken.
+   3. Wat betekent li a:hover?
+      Dat is de opmaak van een link in een lijst als je muis erop staat.
+   4. Bij padding staat 8px 16px.
+      a. Padding is de ruimte binnen een element, tussen de rand en de tekst.
+      b. px betekent pixels, de puntjes waar je scherm uit bestaat.
+      c. Er staan 2 waardes: de eerste is voor boven en onder, de tweede voor links en rechts. */

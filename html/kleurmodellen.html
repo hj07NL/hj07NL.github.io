@@ -1,25 +1,23 @@
-<!DOCTYPE html> <!--dit is de pagina over kleurmodellen, hij staat in de map html-->
-<html> <!--dit is het html-element, hier staat de hele pagina in-->
-    <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
-        <title>Kleurmodellen</title> <!--de titel, die staat op het tabblad-->
-        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
-        <link rel="stylesheet" type="text/css" href="../css/opmaak.css"> <!--link naar mijn CSS. ../ = eerst 1 map omhoog, dan de map css in-->
+<!DOCTYPE html> <!--dit is de pagina over kleurmodellen-->
+<html> <!--dit is het html-element-->
+    <head>
+        <title>Kleurmodellen</title> <!--de naam op het tabblad-->
+        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed op het scherm komen-->
+        <link rel="stylesheet" type="text/css" href="../css/opmaak.css"> <!--link naar mijn opmaak, zonder deze regel heeft de pagina geen kleuren en geen menu-->
     </head>
-    <body> <!--de body: alles wat je ZIET op je site-->
+    <body>
 
-        <!--MENU met dropdown: 3 geneste lijsten.
-            ../ = eerst 1 map omhoog naar de hoofdmap.
-            Pagina's in dezelfde map (html) hebben geen pad nodig.
-            # = spring naar een stukje van de pagina met dat id-->
-        <ul> <!--niveau 1: de donkerblauwe balk-->
-            <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
-            <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
-                <a href="#">Menu ▾</a> <!--href="#" = deze link gaat nergens heen, hij opent alleen het menu-->
-                <ul> <!--niveau 2: klapt open onder Menu-->
+        <!--MENU: een lijst met links naar al mijn pagina's. Hetzelfde menu staat op elke pagina.
+            Een lijst in een lijst is een dropdown, die klapt open als je er met je muis op staat-->
+        <ul>
+            <li><a href="../index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, gaat naar de homepage-->
+            <li class="rechts"> <!--dit stuk staat rechts in de balk-->
+                <a href="#">Menu ▾</a> <!--deze link gaat nergens heen, hij opent alleen het menu-->
+                <ul> <!--klapt open onder Menu-->
                     <li><a href="../index.html">Home</a></li>
                     <li>
                         <a href="ivu.html">◂ Onderwerpen</a>
-                        <ul> <!--niveau 3: de onderwerpen-->
+                        <ul> <!--klapt links naast Onderwerpen open-->
                             <li><a href="ivu.html">Invoer, verwerking, uitvoer</a></li>
                             <li><a href="binairstelsel.html">Binair stelsel</a></li>
                             <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
@@ -28,7 +26,7 @@
                     </li>
                     <li>
                         <a href="ai.html">◂ AI</a>
-                        <ul> <!--niveau 3: de stukjes van de AI-pagina-->
+                        <ul> <!--deze links springen naar een stuk van de AI-pagina (met # en het id)-->
                             <li><a href="ai.html#wat">Wat is AI?</a></li>
                             <li><a href="ai.html#gebruik">Hoe gebruik ik AI?</a></li>
                             <li><a href="ai.html#iphone">AI in mijn iPhone 15</a></li>
@@ -38,22 +36,20 @@
             </li>
         </ul>
 
-        <!--PAGINAKOP: de blauwe balk met de titel van deze pagina-->
+        <!--blauwe balk met de titel van deze pagina-->
         <div class="paginakop">
-            <h1>Kleurmodellen</h1> <!--h1 = de belangrijkste kop van deze pagina-->
+            <h1>Kleurmodellen</h1>
             <p>Hoe maakt een computer kleuren?</p>
         </div>
 
-        <!--div = een block-element: een doos voor de inhoud van mijn pagina-->
+        <!--hier begint de inhoud, elk onderwerp staat in een eigen wit blok-->
         <div class="inhoud">
 
-            <!--Elk onderwerp staat in een eigen wit blok (class="blok"), zie opmaak.css-->
-
-            <!--BLOK 1: PIXELS-->
+            <!--BLOK 1: pixels-->
             <div class="blok">
-                <h2>Wat is een pixel?</h2> <!--h2 = een kopje-->
-                <p>Een digitale afbeelding bestaat uit heel veel kleine vierkantjes: <b>pixels</b>. <!--b = dikgedrukt-->
-                   Het woord pixel komt van <i>picture element</i>. <!--i = schuine letters-->
+                <h2>Wat is een pixel?</h2>
+                <p>Een digitale afbeelding bestaat uit heel veel kleine vierkantjes: <b>pixels</b>.
+                   Het woord pixel komt van <i>picture element</i>.
                    Als je heel ver inzoomt op een foto, zie je de losse pixels. Elke pixel heeft 1 kleur.</p>
             </div>
 
@@ -64,10 +60,9 @@
                    Door de lampjes feller of zwakker te laten branden, maak je alle andere kleuren.
                    Het RGB-model begint met een <b>zwarte</b> achtergrond: alle lampjes uit is zwart, alle lampjes vol aan is wit.</p>
 
-                <!--zelfgemaakte afbeelding (een svg-bestand) in de map images-->
+                <!--plaatje met de RGB- en CMY-cirkels, gemaakt met code. ../images/ = 1 map omhoog en dan de map images in-->
                 <img class="groot" src="../images/kleurmodellen.svg" alt="Links RGB-lichtcirkels op zwart, rechts CMY-inktcirkels op wit">
 
-                <!--TABEL: table = de tabel, tr = een rij, th = een kopcel, td = een gewone cel-->
                 <table>
                     <tr> <th>Kleur 1</th> <th>Kleur 2</th> <th>Kleur 3</th> <th>Nieuwe kleur</th> </tr>
                     <tr> <td>-</td>       <td>-</td>      <td>-</td>      <td>Zwart</td> </tr>
@@ -78,29 +73,27 @@
                 </table>
             </div>
 
-            <!--BLOK 3: DECIMAAL EN HEXADECIMAAL-->
+            <!--BLOK 3: decimaal en hexadecimaal-->
             <div class="blok">
                 <h2>Kleuren als getallen: decimaal en hexadecimaal</h2>
                 <p>Een computer kan niet werken met "een beetje rood". Daarom krijgt elk lampje een getal van <b>0 tot en met 255</b>.
-                   Dat komt doordat elke kleur 1 byte gebruikt: 8 bits, en 2<sup>8</sup> = 256 mogelijkheden. <!--sup = klein getal omhoog-->
+                   Dat komt doordat elke kleur 1 byte gebruikt: 8 bits, en 2<sup>8</sup> = 256 mogelijkheden.
                    Geel is bijvoorbeeld (255, 255, 0): rood vol aan, groen vol aan, blauw uit.</p>
 
                 <p>Op websites schrijf je kleuren vaak in <b>hexadecimaal</b> (16-tallig).
                    Hexadecimaal heeft 16 cijfers: 0 tot en met 9 en daarna A tot en met F (A = 10, B = 11, C = 12, D = 13, E = 14, F = 15).
                    Elke kleur krijgt 2 tekens, met een # ervoor: #RRGGBB.</p>
 
-                <!--class="uitleg" = een oranje gekleurd vakje voor een rekenvoorbeeld-->
-                <div class="uitleg">
-                    <p><b>Zo reken je 242 om naar hex:</b><br> <!--br = nieuwe regel-->
+                <div class="uitleg"> <!--oranje vakje met een rekenvoorbeeld-->
+                    <p><b>Zo reken je 242 om naar hex:</b><br>
                        242 ÷ 16 = 15, rest 2<br>
                        15 = F en 2 = 2, dus 242 = <b>F2</b><br>
                        Terugrekenen: F × 16 + 2 = 15 × 16 + 2 = 240 + 2 = 242 ✓</p>
                 </div>
 
-                <!--KLEURENTABEL: in de eerste cel zie je de kleur.
-                    style="background-color: ..." = de kleur staat direct in de HTML (inline CSS).
-                    Ik schrijf sommige kleuren met rgb() (decimaal) en sommige met # (hexadecimaal),
-                    om te laten zien dat allebei werkt-->
+                <!--tabel met kleuren: in het eerste vakje zie je de kleur zelf.
+                    Die kleur zet ik hier direct in de HTML met style="background-color: ...".
+                    De ene keer schrijf ik hem met rgb() (decimaal) en de andere keer met # (hexadecimaal), om te laten zien dat allebei werkt-->
                 <table>
                     <tr> <th>Kleur</th> <th>Naam</th> <th>Decimaal (R, G, B)</th> <th>Hexadecimaal</th> </tr>
                     <tr> <td class="kleurvak" style="background-color: rgb(255, 0, 0);"></td>   <td>Rood</td>  <td>255, 0, 0</td>   <td>#FF0000</td> </tr>
@@ -113,16 +106,15 @@
                 </table>
             </div>
 
-            <!--BLOK 4: KLEURENLAB (zelf spelen)-->
+            <!--BLOK 4: kleurenlab, hier kun je zelf met kleuren spelen-->
             <div class="blok">
                 <h2>Kleurenlab: zoek zelf een kleur</h2>
                 <p>Klik op een gekleurd vak hieronder. Er opent een <b>kleurkiezer</b>.
                    Daarin kun je zelf een hex-code typen (bijvoorbeeld F28C28) of de R-, G- en B-getallen invullen,
                    en je ziet meteen welke kleur het wordt. Klik op de pijltjes in de kleurkiezer om te wisselen tussen HEX en RGB.</p>
 
-                <!--input type="color" = een vakje waarmee je een kleur kiest. De browser opent zelf een kleurkiezer.
-                    value = de kleur waarmee het vak begint (altijd in hexadecimaal).
-                    label = de tekst die bij het vakje hoort. for="..." koppelt het label aan het vakje met dat id-->
+                <!--3 vakjes waarmee je een kleur kiest. Als je erop klikt opent de browser een kleurkiezer.
+                    value is de kleur waarmee het vakje begint-->
                 <p class="kiezers">
                     <label for="kiezer1">Mijn oranje</label>      <input type="color" id="kiezer1" value="#f28c28">
                     <label for="kiezer2">Mijn donkerblauw</label> <input type="color" id="kiezer2" value="#0b2545">
@@ -130,17 +122,16 @@
                 </p>
 
                 <p>Wil je nog meer spelen? Op w3schools kun je met schuifjes de rood-, groen- en blauwwaarde veranderen:
-                   <!--target="_blank" = de link opent in een nieuw tabblad, zodat mijn site open blijft-->
+                   <!--opent in een nieuw tabblad-->
                    <a href="https://www.w3schools.com/colors/tryit.asp?filename=trycolors_rgbvalues" target="_blank">RGB-kleuren proberen op w3schools</a>.</p>
             </div>
 
-            <!--BLOK 5: OEFENEN-->
+            <!--BLOK 5: oefenen-->
             <div class="blok">
                 <h2>Oefenen: reken om</h2>
                 <p>Reken eerst zelf uit en klik daarna op de vraag om het antwoord te zien.</p>
 
-                <!--details = een uitklapblok. summary = de tekst die je altijd ziet (de vraag).
-                    De rest zie je pas als je op de vraag klikt. Dit werkt zonder JavaScript-->
+                <!--de vragen klappen open als je erop klikt, dan zie je het antwoord-->
                 <details>
                     <summary>1. Wat is 255 in hexadecimaal?</summary>
                     <p>255 ÷ 16 = 15, rest 15. 15 = F, dus 255 = <b>FF</b>.</p>
@@ -179,9 +170,9 @@
                 </div>
             </div>
 
-            <p><a href="../index.html">Terug naar home</a></p> <!--link terug naar de homepage. ../ = 1 map omhoog-->
+            <p><a href="../index.html">Home</a></p> <!--link terug naar de homepage, ../ gaat eerst 1 map omhoog-->
 
-        </div> <!--einde van de doos-->
+        </div>
 
     </body>
 </html>

@@ -1,24 +1,23 @@
-<!DOCTYPE html> <!--dit is de homepage van mijn site, die blijft altijd in de hoofdmap staan-->
-<html> <!--dit is het html-element, hier staat de hele pagina in-->
-    <head> <!--de head: informatie OVER de pagina, die zie je niet op de pagina-->
-        <title>Ik ben Hai-Jun</title> <!--de titel, die staat op het tabblad-->
-        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed worden getoond-->
-        <link rel="stylesheet" type="text/css" href="css/opmaak.css"> <!--link naar mijn CSS-bestand. css/ = in de map css-->
+<!DOCTYPE html> <!--dit is de homepage van mijn site-->
+<html> <!--dit is het html-element-->
+    <head>
+        <title>Ik ben Hai-Jun</title> <!--de naam op het tabblad-->
+        <meta charset="utf-8"> <!--zorgt dat letters als ë en é goed op het scherm komen-->
+        <link rel="stylesheet" type="text/css" href="css/opmaak.css"> <!--link naar mijn opmaak, zonder deze regel heeft de pagina geen kleuren en geen menu-->
     </head>
-    <body> <!--de body: alles wat je ZIET op je site-->
+    <body>
 
-        <!--MENU met dropdown: 3 geneste lijsten.
-            html/ = de pagina staat in de map html.
-            # = spring naar een stukje van de pagina met dat id-->
-        <ul> <!--niveau 1: de donkerblauwe balk-->
-            <li><a href="index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, klikken = naar home-->
-            <li class="rechts"> <!--class="rechts" = dit item staat rechts in de balk-->
-                <a href="#">Menu ▾</a> <!--href="#" = deze link gaat nergens heen, hij opent alleen het menu-->
-                <ul> <!--niveau 2: klapt open onder Menu-->
+        <!--MENU: een lijst met links naar al mijn pagina's. Hetzelfde menu staat op elke pagina.
+            Een lijst in een lijst is een dropdown, die klapt open als je er met je muis op staat-->
+        <ul>
+            <li><a href="index.html">Hai-Jun</a></li> <!--mijn naam links in de balk, gaat naar de homepage-->
+            <li class="rechts"> <!--dit stuk staat rechts in de balk-->
+                <a href="#">Menu ▾</a> <!--deze link gaat nergens heen, hij opent alleen het menu-->
+                <ul> <!--klapt open onder Menu-->
                     <li><a href="index.html">Home</a></li>
                     <li>
                         <a href="html/ivu.html">◂ Onderwerpen</a>
-                        <ul> <!--niveau 3: de onderwerpen-->
+                        <ul> <!--klapt links naast Onderwerpen open-->
                             <li><a href="html/ivu.html">Invoer, verwerking, uitvoer</a></li>
                             <li><a href="html/binairstelsel.html">Binair stelsel</a></li>
                             <li><a href="html/kleurmodellen.html">Kleurmodellen</a></li>
@@ -27,7 +26,7 @@
                     </li>
                     <li>
                         <a href="html/ai.html">◂ AI</a>
-                        <ul> <!--niveau 3: de stukjes van de AI-pagina-->
+                        <ul> <!--deze links springen naar een stuk van de AI-pagina (met # en het id)-->
                             <li><a href="html/ai.html#wat">Wat is AI?</a></li>
                             <li><a href="html/ai.html#gebruik">Hoe gebruik ik AI?</a></li>
                             <li><a href="html/ai.html#iphone">AI in mijn iPhone 15</a></li>
@@ -37,33 +36,29 @@
             </li>
         </ul>
 
-        <!--HONINGRAAT: mijn ontwerp. Een doos (div) met 3 rijen zeshoeken.
-            Elke rij is een div met class="rij". Elke zeshoek is een link (a) met class="zeshoek".
-            Elke zeshoek heeft 3 classes, met spaties ertussen:
-            1. "zeshoek"              = de vorm van een zeshoek
-            2. "onderwerp" of "hobby" = de kleur: oranje (informatica) of blauw (over mij)
-            3. "..."            = de achtergrondafbeelding van die zeshoek (zie opmaak.css)-->
-               <div class="honingraat">
+        <!--HONINGRAAT: mijn ontwerp met 3 rijen zeshoeken. Elke zeshoek is een link naar een pagina of een stuk van deze pagina.
+            Elke zeshoek heeft 3 classes: zeshoek (de vorm), onderwerp of hobby (oranje of blauw) en een naam voor de foto erin-->
+        <div class="honingraat">
 
-            <!--RIJ 1-->
+            <!--rij 1-->
             <div class="rij">
-                <a class="zeshoek hobby natuur" href="#natuur">Natuur</a> <!--#natuur = spring naar het stuk over natuur onderaan-->
+                <a class="zeshoek hobby natuur" href="#natuur">Natuur</a> <!--springt naar het stuk over natuur verderop op deze pagina-->
                 <a class="zeshoek onderwerp ivu" href="html/ivu.html">Invoer, verwerking, uitvoer</a>
                 <a class="zeshoek onderwerp binair" href="html/binairstelsel.html">Binair stelsel</a>
                 <a class="zeshoek onderwerp ai-gebruik" href="html/ai.html#gebruik">Hoe gebruik ik AI?</a>
             </div>
 
-            <!--RIJ 2: class="rij verschoven" = deze rij schuift een halve zeshoek naar rechts (zie opmaak.css)-->
+            <!--rij 2: deze rij schuift een halve zeshoek op, zodat het een echte honingraat wordt-->
             <div class="rij verschoven">
                 <a class="zeshoek onderwerp compressie" href="html/compressie.html">Compressie</a>
-                <div class="zeshoek midden"> <!--de middelste zeshoek: geen link maar een div, met mijn naam-->
-                    <h1>Ik ben Hai-Jun</h1> <!--h1 = de belangrijkste kop van de pagina-->
+                <div class="zeshoek midden"> <!--de middelste zeshoek met mijn naam, dit is geen link-->
+                    <h1>Ik ben Hai-Jun</h1>
                 </div>
-                <a class="zeshoek onderwerp ai" href="html/ai.html" title="AI"></a> <!--geen tekst, de foto zegt al "AI". title = tekst die je ziet als je muis erop staat-->
+                <a class="zeshoek onderwerp ai" href="html/ai.html" title="AI"></a> <!--geen tekst, want op de foto staat al AI. Als je muis erop staat zie je "AI"-->
                 <a class="zeshoek onderwerp kleur" href="html/kleurmodellen.html">Kleurmodellen</a>
             </div>
 
-            <!--RIJ 3-->
+            <!--rij 3-->
             <div class="rij">
                 <a class="zeshoek hobby familie" href="#familie">Familie en vrienden</a>
                 <a class="zeshoek hobby hockey" href="#hockey">Hockey</a>
@@ -71,17 +66,16 @@
                 <a class="zeshoek onderwerp iphone" href="html/ai.html#iphone">AI in mijn iPhone 15</a>
             </div>
 
-        </div> <!--einde van de honingraat-->
+        </div>
 
-        <!--OVER MIJ: elk onderwerp in een eigen wit blok (class="blok").
-            Elk blok heeft een id (een bladwijzer). De blauwe zeshoeken springen hierheen, bijvoorbeeld met href="#hockey"-->
+        <!--OVER MIJ: elk onderwerp in een wit blok. De blauwe zeshoeken springen naar deze blokken door het id-->
         <div class="inhoud" id="over-mij">
 
             <div class="blok">
-                <h2>Over mij</h2> <!--h2 = een kopje-->
+                <h2>Over mij</h2>
                 <p>Hoi, ik ben Hai-Jun! Ik ben 16 jaar en zit in 4 havo op het Vlietland College.
                    Ik vind informatica leuk, omdat je leert hoe je zelf een website bouwt. Dat vind ik interessant.
-                   Deze website heb ik zelf gemaakt met HTML en CSS.</p>
+                   Deze website heb ik gebouwd met HTML en CSS.</p>
             </div>
 
             <div class="blok" id="hockey">
@@ -108,7 +102,20 @@
                    Ik ben geadopteerd en woon nu in Nederland.</p>
             </div>
 
-        </div> <!--einde van de doos-->
+            <!--BRONNEN: waar mijn afbeeldingen, video en spel vandaan komen-->
+            <div class="blok" id="bronnen">
+                <h2>Bronnen</h2>
+                <ul class="bronnen">
+                    <li>Tekeningen (svg) van de kleurmodellen: gemaakt met code</li>
+                    <li>Foto Mijn afkomst: het Xianren-paviljoen in Fangchenggang, van het internet</li>
+                    <li>Foto's natuur, AI, iPhone 15, binair, IVU, compressie, familie, hoe gebruik ik AI: van het internet</li>
+                    <li>Logo hockey: hockeyclub Forescate</li>
+                    <li>Video compressie: Crash Course Computer Science #21 (https://youtu.be/OtDxDvCpPL4?si=Ir0WYSLxqjUw6cf7)</li>
+                    <li>Spel: Binary Bonanza (penjee.com)</li>
+                </ul>
+            </div>
+
+        </div>
 
     </body>
 </html>
