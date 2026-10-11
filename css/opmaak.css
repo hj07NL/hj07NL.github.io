@@ -198,12 +198,23 @@ a.hobby:hover {
 /* TEKENINGEN (svg): wit en half doorzichtig, de kleur van de zeshoek schijnt erdoorheen.
    url("...") = waar de afbeelding staat. ../ = vanuit de map css eerst 1 map omhoog, dan de map images in */
 /* FOTO'S met een oranje laagje (onderwerpen) */
-.ivu        { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ivu.jpg"); }
-.binair     { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/binair.jpg"); }
+/* IVU-tegel: de HELE afbeelding bovenin, de tekst eronder */
+.ivu {
+  background-image: linear-gradient(rgba(242, 140, 40, 0.35), rgba(242, 140, 40, 0.35)), url("../images/ivu.jpg");
+  background-size: contain, 92%;              /* 2 lagen, 2 waardes: het laagje vult alles, de foto is 92% van de breedte */
+  background-repeat: no-repeat;               /* de foto niet herhalen */
+  background-position: center, center 28%;    /* de foto staat in het midden, 28% van boven */
+  padding-top: 70px;                          /* de tekst 70px naar beneden schuiven, onder de foto */
+}.binair     { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/binair.jpg"); }
 .ai-gebruik { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ai-gebruik.jpg"); }
 .compressie { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/compressie.jpg"); }
-.kleur      { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/kleur.jpg"); }
-/* FOTO met een blauw laagje (over mij) */
+/* Kleurmodellen-tegel: de hele afbeelding met cirkels, in het midden, met echte kleuren */
+.kleur {
+  background-image: linear-gradient(rgba(242, 140, 40, 0.2), rgba(242, 140, 40, 0.2)), url("../images/kleur.jpg");
+  background-size: contain, 100%;             /* de foto past precies in de breedte, er wordt niets afgeknipt */
+  background-repeat: no-repeat;               /* niet herhalen */
+  background-position: center, center;        /* precies in het midden */
+}
 .familie    { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/familie.jpg"); }
 
 /* FOTO'S met een gekleurd laagje eroverheen.
