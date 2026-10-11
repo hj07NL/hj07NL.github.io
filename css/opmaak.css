@@ -197,12 +197,14 @@ a.hobby:hover {
 
 /* TEKENINGEN (svg): wit en half doorzichtig, de kleur van de zeshoek schijnt erdoorheen.
    url("...") = waar de afbeelding staat. ../ = vanuit de map css eerst 1 map omhoog, dan de map images in */
-.ivu        { background-image: url("../images/ivu.svg"); }
-.binair     { background-image: url("../images/binair.svg"); }
-.ai-gebruik { background-image: url("../images/ai-gebruik.svg"); }
-.compressie { background-image: url("../images/compressie.svg"); }
-.kleur      { background-image: url("../images/kleur.svg"); }
-.familie    { background-image: url("../images/familie.svg"); }
+/* FOTO'S met een oranje laagje (onderwerpen) */
+.ivu        { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ivu.jpg"); }
+.binair     { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/binair.jpg"); }
+.ai-gebruik { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ai-gebruik.jpg"); }
+.compressie { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/compressie.jpg"); }
+.kleur      { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/kleur.jpg"); }
+/* FOTO met een blauw laagje (over mij) */
+.familie    { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/familie.jpg"); }
 
 /* FOTO'S met een gekleurd laagje eroverheen.
    linear-gradient(kleur, kleur) = een laagje van 1 kleur. Die ligt BOVENOP de foto (wat eerst staat, ligt bovenop).
