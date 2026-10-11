@@ -209,11 +209,12 @@ a.hobby:hover {
 .ai-gebruik { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/ai-gebruik.jpg"); }
 .compressie { background-image: linear-gradient(rgba(242, 140, 40, 0.6), rgba(242, 140, 40, 0.6)), url("../images/compressie.jpg"); }
 /* Kleurmodellen-tegel: de hele afbeelding met cirkels, in het midden, met echte kleuren */
-.kleur {
-  background-image: linear-gradient(rgba(242, 140, 40, 0.2), rgba(242, 140, 40, 0.2)), url("../images/kleur.jpg");
-  background-size: contain, 230%;             /* de foto past precies in de breedte, er wordt niets afgeknipt */
-  background-repeat: no-repeat;               /* niet herhalen */
-  background-position: center, 60% 50%;        /* precies in het midden */
+/* Kleurmodellen-tegel: zelfgetekende CMY-cirkels (svg), precies in het midden.
+   Geen gekleurd laagje eroverheen, zodat je de echte inktkleuren ziet */
+.tegel-kleur {
+  background-image: url("../images/kleur-cirkels.svg");
+  background-size: cover;          /* de tekening vult de hele zeshoek */
+  background-position: center;     /* precies in het midden */
 }
 .familie    { background-image: linear-gradient(rgba(29, 78, 137, 0.6), rgba(29, 78, 137, 0.6)), url("../images/familie.jpg"); }
 

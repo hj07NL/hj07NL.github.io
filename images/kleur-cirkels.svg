@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 162">
+  <!--3 cirkels in CMY-kleuren, precies in het midden van de zeshoek (het midden is x=70, y=81).
+      mix-blend-mode: multiply = de kleuren mengen als inkt: waar ze overlappen wordt het donkerder-->
+  <circle cx="54" cy="68" r="34" fill="#00aeef" style="mix-blend-mode:multiply"/> <!--cyaan, linksboven-->
+  <circle cx="86" cy="68" r="34" fill="#ec008c" style="mix-blend-mode:multiply"/> <!--magenta, rechtsboven-->
+  <circle cx="70" cy="96" r="34" fill="#fff200" style="mix-blend-mode:multiply"/> <!--geel, onder-->
+</svg>
