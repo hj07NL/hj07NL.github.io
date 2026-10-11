@@ -211,7 +211,7 @@ a.hobby:hover {
 /* Kleurmodellen-tegel: de hele afbeelding met cirkels, in het midden, met echte kleuren */
 /* Kleurmodellen-tegel: zelfgetekende CMY-cirkels (svg), precies in het midden.
    Geen gekleurd laagje eroverheen, zodat je de echte inktkleuren ziet */
-.tegel-kleur {
+.kleur {
   background-image: url("../images/kleur-cirkels.svg");
   background-size: cover;          /* de tekening vult de hele zeshoek */
   background-position: center;     /* precies in het midden */
